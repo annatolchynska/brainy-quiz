@@ -33,7 +33,7 @@ h2 {
 }
 
 /* play button */
-.btn {
+#btn {
     font-size: 60px;
     text-decoration: none;
     color: #630094;
@@ -44,7 +44,7 @@ h2 {
     box-shadow: 15px 15px 5px gray;
 }
 
-.btn:hover {
+#btn:hover {
     background: #b3ff66;
     color: white;
     box-shadow: -15px -15px 5px gray;
