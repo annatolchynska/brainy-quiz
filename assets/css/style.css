@@ -49,3 +49,19 @@ h2 {
     color: white;
     box-shadow: -15px -15px 5px gray;
 }
+/* media queries */
+/* for sreens size from 950px and down */
+@media screen and (max-width: 950px) {
+    h1 {
+        font-size: 50px;
+    }
+   }
+
+/* for sreens size from 600px and down */
+@media screen and (max-width: 600px) {
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 40px;
+}}
