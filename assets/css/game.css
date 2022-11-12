@@ -45,7 +45,12 @@
     border: 2px solid #6E260E;
     box-shadow: none;
 
-
+}
+.correct {
+    background: rgba(46, 204, 113, .5);
+}
+.incorrect {
+    background: rgba(128, 0, 0, .5);
 }
 /* for sreens size from 700px and down */
 @media screen and (max-width: 700px){
