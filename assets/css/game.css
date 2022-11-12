@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Mali;
+    background: url(/assets/css/image/img.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    color: #023020;
+}
+/* score section */
+#score {
+    font-size: 30px;
+    padding: 40px;
+    text-shadow: 5px 5px 8px #023020;
+}
+#score-number {
+    padding-left: 60px;
+    text-shadow: 5px 5px 8px #023020;
+}
+
+/* question section */
+
+#question {    text-align: center;
+    font-size: 60px;
+}
+#choice {
+    display: flex;
+    width: 80%;
+    margin-bottom: 15px;
+    margin-left: 120px;
+    padding-left: 50px;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 15px 15px 15px 5px gray;
+}
+#choice:hover{
+    cursor: pointer;
+    border: 2px solid #6E260E;
+    box-shadow: none;
+}
