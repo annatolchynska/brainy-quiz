@@ -159,4 +159,16 @@ const questions = [{
         incorrect: false,
 
     },
+    {
+        question: "What country does have the biggest number of pyramids in the world?",
+        choice1: 'Sudan',
+        correct: true,
+        choice2: 'Egypt',
+        incorrect: false,
+        choice3: 'China',
+        incorrect: false,
+        choice4: 'Mexico',
+        incorrect: false,
+
+    },
 ]
