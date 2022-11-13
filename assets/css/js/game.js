@@ -1,174 +1,224 @@
-const questionElement = document.getElementById('question');
-const answerElement = document.getElementByTagName ('p')
-const startButton = document.getElementById('btn');
-startButton.addEventListener('click', runGame);
+const question = document.querySelector('#question');
+const choices = Array.from(document.querySelectorAll('.choice-text'));
+const progressText = document.querySelector('#progressText');
+const scoreText = document.querySelector('#score');
+const progressBarFull = document.querySelector('#progressBarFull');
 
-let shuffledQuestions, currentQuestionIndex;
+let currentQuestion = {}
+let acceptingAnswers = true
+let score = 0
+let questionCounter = 0
+let availableQuestions = []
 
-function runGame() {
-    console.log('Started');
-    shuffledQuestions = questions;
-    currentIndexQuestion = 0;
-    setNextQuestion()
-
-}
-function setNextQuestion () {
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
-}
-function ShowQuestion(question) {
-questionElement.innerText = question.question
-}
-
-function checkingAnswers() {
-    let userAnswer = document.getElementByClassName('choice');
-    let correctAnswer = userAnswer = answer;
-    if (correctAnswer) {
-        alert("Hey! You got it right! :D");
-        incrementScore();
-    }
-}
 /* questions-answers*/
-const questions = [{
+let questions = [{
         question: 'What part of human body cannot heal itself?',
         choice1: 'Skin',
-        incorrect: false,
         choice2: 'Liver',
-        incorrect: false,
         choice3: 'Teeth',
-        correct: true,
         choice4: 'Bones',
-        incorrect: false,
+        answer: 3,
     },
     {
         question: "It's illegal to own just one species of this animal in Switzerland.",
         choice1: 'Dog',
-        incorrect: false,
         choice2: 'Parrot',
-        incorrect: false,
-        choice3: 'Lizzard',
-        incorrect: false,
-        choice4: 'Guinea pig',
-        correct: true,
 
+        choice3: 'Lizzard',
+
+        choice4: 'Guinea pig',
+        answer: 4
     },
+
     {
         question: "The anthem of this country has no lyrics.",
+
         choice1: 'Ukraine',
-        incorrect: false,
+
         choice2: 'Spain',
-        correct: true,
+
         choice3: 'Malta',
-        incorrect: false,
+
         choice4: 'Tanzania',
-        incorrect: false,
+        answer: 2
 
-    },
-    {
+
+    }, {
         question: "Who designed chupa chups logo?",
+
         choice1: 'Andy Warhol',
-        incorrect: false,
+
         choice2: 'Salvador Dali',
-        correct: true,
+
         choice3: 'Pablo Picasso',
-        incorrect: false,
+
         choice4: 'Jean-Michelle Basquiat',
-        incorrect: false,
+        answer: 2
 
-    },
-    {
+
+    }, {
         question: "The largest organ of human body is...",
+
         choice1: 'Skin',
-        correct: true,
+
         choice2: 'Tongue',
-        incorrect: false,
+
         choice3: 'Lungs',
-        incorrect: false,
+
         choice4: 'Intestines',
-        incorrect: false,
+        answer: 1
 
-    },
-    {
+
+    }, {
         question: "What animal's eye is bigger than its brain?",
+
         choice1: 'Sloth',
-        incorrect: false,
+
         choice2: 'Ostrich',
-        correct: true,
+
         choice3: 'Whale',
-        incorrect: false,
+
         choice4: 'Schrimp',
-        incorrect: false,
+        answer: 2
 
-    },
-    {
+
+    }, {
         question: "What's the smallest country in the World?",
+
         choice1: 'Lichtenstein',
-        incorrect: false,
+
         choice2: 'Luxembourg',
-        incorrect: false,
+
         choice3: 'Vatican',
-        correct: true,
+
         choice4: 'Andorra',
-        incorrect: false,
+        answer: 3
 
-    },
-    {
+
+    }, {
         question: "What is the only flying mammal?",
+
         choice1: 'Ostrich',
-        incorrect: false,
+
         choice2: 'Bat',
-        correct: true,
+
         choice3: 'Chicken',
-        incorrect: false,
+
         choice4: 'Flying squirrells',
-        incorrect: false,
+        answer: 2
 
-    },
-    {
+
+    }, {
         question: "What mammal doesn't have a stomach?",
+
         choice1: 'Whale',
-        incorrect: false,
+
         choice2: 'Platypus',
-        correct: true,
+
         choice3: 'Wombat',
-        incorrect: false,
+
         choice4: 'Armadillo',
-        incorrect: false,
+        answer: 2
 
-    },
-    {
+
+    }, {
         question: "What is the deadliest animal in the world?",
+
         choice1: 'Crocodile',
-        incorrect: false,
+
         choice2: 'Shark',
-        incorrect: false,
+
         choice3: 'Mosquito',
-        correct: true,
+
         choice4: 'Cobra',
-        incorrect: false,
+        answer: 3
 
-    },
-    {
+
+    }, {
         question: "What is the tallest building in the world?",
-        choice1: 'The Burg Khalifa in Dubai',
-        correct: true,
-        choice2: 'The Empire State Building in New York ',
-        incorrect: false,
-        choice3: 'The Shanghai Tower in Shanghai',
-        incorrect: false,
-        choice4: 'The One World Trade Center in New York',
-        incorrect: false,
 
-    },
-    {
+        choice1: 'The Burg Khalifa in Dubai',
+
+        choice2: 'The Empire State Building in New York ',
+
+        choice3: 'The Shanghai Tower in Shanghai',
+
+        choice4: 'The One World Trade Center in New York',
+        answer: 1
+
+
+    }, {
         question: "What country does have the biggest number of pyramids in the world?",
         choice1: 'Sudan',
-        correct: true,
         choice2: 'Egypt',
-        incorrect: false,
         choice3: 'China',
-        incorrect: false,
         choice4: 'Mexico',
-        incorrect: false,
+        answer: 1
 
     },
 ]
+const SCORE_POINTS = 100
+const MAX_QUESTIONS = 12
+
+let startGame = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+}
+
+let getNewQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign('end.html')
+    }
+}
+questionCounter++
+progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+
+const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+currentQuestion = availableQuestions[questionsIndex]
+questions.innerText = currentQuestion.question
+
+choices.forEach(choice => {
+    const number = choice.dataset.number
+    choice.innerText = currentQuestion['choice' + number]
+})
+
+availableQuestions.splice(questionsIndex, 1)
+
+acceptingAnswers = true
+
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if (!acceptingAnswers) return
+
+        acceptingAnswers = false
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset.number
+
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+        const correctAnswer = choices[currentQuestion.answer - 1]
+        if (classToApply === 'correct') {
+            incrementScore(SCORE_POINTS)
+        } else if (classToApply === 'incorrect') {
+            correctAnswer.parentElement.classList.add('correct')
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply)
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            correctAnswer.parentElement.classList.remove('correct')
+            getNewQuestion()
+
+        }, 1000)
+    })
+})
+let incrementScore = num => {
+    score += num
+    scoreNumber.innerText = score
+}
+startGame()

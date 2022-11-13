@@ -16,7 +16,7 @@
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 50px;
     color: #630094;
     text-align: center;
     padding-top: 20px;
@@ -30,6 +30,13 @@ h2 {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 100px;
+}
+h3 {
+    font-size: 50px;
+    color: #630094;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 80px;
 }
 
 /* play button */
@@ -64,4 +71,7 @@ h1 {
 }
 h2 {
     font-size: 40px;
+}
+h3{
+    font-size: 30px;
 }}
