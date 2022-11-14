@@ -104,7 +104,7 @@ const data = [{
 ];
 
 const quiz = document.getElementById('quiz');
-const answerEls = document.querySelectorAll('.choice')
+const answerEls = document.querySelectorAll('.choice_text')
 const questionEl = document.getElementById('question')
 const optionA = document.getElementById('choice_text1')
 const optionB = document.getElementById('choice_text2')
@@ -135,7 +135,6 @@ function deselectAnswers() {
     answerEls.forEach((answerEl) => (
         answerEl.checked = false))
 }
-
 function getSelect() {
     let answer
     answerEls.forEach((answerEl) => {
@@ -144,17 +143,3 @@ function getSelect() {
     })
     return answer;
 }
-submitBtn.addEventListener('click', () => {
-    const answer = getSelected()
-    if (answer) {
-        if (answer === data[currentQuiz].correct) {
-            score++
-        }
-        currentQuiz++
-        if (currentQuiz < data.length) {
-            loadQuiz()
-        } else {
-            quiz.innerHTML = `You answered ${score}/${data.length}questions correctly`
-        }
-    }
-})
