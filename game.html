@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section class="game">
+    <div class="game">
         <div class="hud-item">
             <p id="progressText" class="hud-prefix">
                 Question
@@ -20,26 +20,26 @@
                 <div id="progressBarFull"></div>
             </div>
         </div>
-        <div class="score">
-            <p class="score"> SCORE <span> &#128396</span></p>
-            <h1 id="score-number">0</h1>
+        <div class="hud-item">
+            <p class="hud-prefix"> SCORE <span> &#128396</span></p>
+            <h1 class="main-text" id="score-number">0</h1>
         </div>
-        <div id="question">
-            <h1>What is the answer to this question?</h1>
+
+        <h1 id="question"> Insert your question here</h1>
+
+        <div class="choice">
+            <p id="choice_text1" data-number="1">Choice 1</p>
         </div>
         <div class="choice">
-            <p class="choice-text">choice</p>
+            <p id="choice_text2" data-number="2">Choice 2</p>
         </div>
         <div class="choice">
-            <p class="choice-text">B</p>
+            <p id="choice_text3" data-number="3">Choice 3</p>
         </div>
         <div class="choice">
-            <p class="choice-text">C</p>
+            <p id="choice_text4" data-number="4">Choice 4</p>
         </div>
-        <div class="choice">
-            <p class="choice-text">D</p>
-        </div>
-    </section>
+    </div>
     <script src="/assets/css/js/game.js"></script>
 </body>
 
