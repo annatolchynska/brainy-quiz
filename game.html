@@ -11,33 +11,36 @@
 </head>
 
 <body>
-    <div class="game">
-        <div class="hud-item">
-            <p id="progressText" class="hud-prefix">
+    <div class="quiz" id="quiz">
+        <div class="score-item">
+            <p id="progressText">
                 Question
             </p>
             <div id="progressBar">
                 <div id="progressBarFull"></div>
             </div>
         </div>
-        <div class="hud-item">
-            <p class="hud-prefix"> SCORE <span> &#128396</span></p>
+        <div class="score-item">
+            <p id="current-score"> SCORE <span> &#128396</span></p>
             <h1 class="main-text" id="score-number">0</h1>
         </div>
-
-        <h1 id="question"> Insert your question here</h1>
-
-        <div class="choice">
-            <p id="choice_text1" data-number="1">Choice 1</p>
+        <div id="questions">
+            <h1 id="question"> Insert your question here</h1>
         </div>
-        <div class="choice">
-            <p id="choice_text2" data-number="2">Choice 2</p>
+        <div class="answer">
+            <p id="choice_text1">1</p>
         </div>
-        <div class="choice">
-            <p id="choice_text3" data-number="3">Choice 3</p>
+        <div class="answer">
+            <p id="choice_text2">2</p>
         </div>
-        <div class="choice">
-            <p id="choice_text4" data-number="4">Choice 4</p>
+        <div class="answer">
+            <p id="choice_text3">3</p>
+        </div>
+        <div class="answer">
+            <p id="choice_text4">4</p>
+        </div>
+        <div>
+            <input id="button" type="button" value="SUBMIT!">
         </div>
     </div>
     <script src="/assets/css/js/game.js"></script>

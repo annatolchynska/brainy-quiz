@@ -1,108 +1,160 @@
-
 /* questions-answers*/
-const questions = [{
+const data = [{
         question: 'What part of human body cannot heal itself?',
-        choice1: 'Skin',
-        choice2: 'Liver',
-        choice3: 'Teeth',
-        choice4: 'Bones',
-        answer: 3,
+        a: 'Skin',
+        b: 'Liver',
+        c: 'Teeth',
+        d: 'Bones',
+        correct: "c",
     },
     {
         question: "It's illegal to own just one species of this animal in Switzerland.",
-        choice1: 'Dog',
-        choice2: 'Parrot',
-        choice3: 'Lizzard',
-        choice4: 'Guinea pig',
-        answer: 4
+        a: 'Dog',
+        b: 'Parrot',
+        c: 'Lizzard',
+        d: 'Guinea pig',
+        correct: "d",
     },
 
     {
         question: "The anthem of this country has no lyrics.",
-        choice1: 'Ukraine',
-        choice2: 'Spain',
-        choice3: 'Malta',
-        choice4: 'Tanzania',
-        answer: 2
+        a: 'Ukraine',
+        b: 'Spain',
+        c: 'Malta',
+        d: 'Tanzania',
+        correct: "b",
 
 
     }, {
         question: "Who designed chupa chups logo?",
-        choice1: 'Andy Warhol',
-        choice2: 'Salvador Dali',
-        choice3: 'Pablo Picasso',
-        choice4: 'Jean-Michelle Basquiat',
-        answer: 2
+        a: 'Andy Warhol',
+        b: 'Salvador Dali',
+        c: 'Pablo Picasso',
+        d: 'Jean-Michelle Basquiat',
+        correct: "b",
 
 
     }, {
         question: "The largest organ of human body is...",
-        choice1: 'Skin',
-        choice2: 'Tongue',
-        choice3: 'Lungs',
-        choice4: 'Intestines',
-        answer: 1
+        a: 'Skin',
+        b: 'Tongue',
+        c: 'Lungs',
+        d: 'Intestines',
+        correct: "a",
 
 
     }, {
         question: "What animal's eye is bigger than its brain?",
-        choice1: 'Sloth',
-        choice2: 'Ostrich',
-        choice3: 'Whale',
-        choice4: 'Schrimp',
-        answer: 2
+        a: 'Sloth',
+        b: 'Ostrich',
+        c: 'Whale',
+        d: 'Schrimp',
+        correct: "b",
 
 
     }, {
         question: "What's the smallest country in the World?",
-        choice1: 'Lichtenstein',
-        choice2: 'Luxembourg',
-        choice3: 'Vatican',
-        choice4: 'Andorra',
-        answer: 3
-
+        a: 'Lichtenstein',
+        b: 'Luxembourg',
+        c: 'Vatican',
+        d: 'Andorra',
+        correct: "c",
 
     }, {
         question: "What is the only flying mammal?",
-        choice1: 'Ostrich',
-        choice2: 'Bat',
-        choice3: 'Chicken',
-        choice4: 'Flying squirrells',
-        answer: 2
+        a: 'Ostrich',
+        b: 'Bat',
+        c: 'Chicken',
+        d: 'Flying squirrells',
+        correct: "b",
 
     }, {
         question: "What mammal doesn't have a stomach?",
-        choice1: 'Whale',
-        choice2: 'Platypus',
-        choice3: 'Wombat',
-        choice4: 'Armadillo',
-        answer: 2
+        a: 'Whale',
+        b: 'Platypus',
+        c: 'Wombat',
+        d: 'Armadillo',
+        correct: "b",
 
     }, {
         question: "What is the deadliest animal in the world?",
-        choice1: 'Crocodile',
-        choice2: 'Shark',
-        choice3: 'Mosquito',
-        choice4: 'Cobra',
-        answer: 3
-
+        a: 'Crocodile',
+        b: 'Shark',
+        c: 'Mosquito',
+        d: 'Cobra',
+        correct: "c",
 
     }, {
         question: "What is the tallest building in the world?",
-        choice1: 'The Burg Khalifa in Dubai',
-        choice2: 'The Empire State Building in New York ',
-        choice3: 'The Shanghai Tower in Shanghai',
-        choice4: 'The One World Trade Center in New York',
-        answer: 1
+        a: 'The Burg Khalifa in Dubai',
+        b: 'The Empire State Building in New York ',
+        c: 'The Shanghai Tower in Shanghai',
+        d: 'The One World Trade Center in New York',
+        correct: "a",
 
     }, {
         question: "What country does have the biggest number of pyramids in the world?",
-        choice1: 'Sudan',
-        choice2: 'Egypt',
-        choice3: 'China',
-        choice4: 'Mexico',
-        answer: 1
+        a: 'Sudan',
+        b: 'Egypt',
+        c: 'China',
+        d: 'Mexico',
+        correct: "a",
 
     },
 ];
 
+const quiz = document.getElementById('quiz');
+const answerEls = document.querySelectorAll('.choice')
+const questionEl = document.getElementById('question')
+const optionA = document.getElementById('choice_text1')
+const optionB = document.getElementById('choice_text2')
+const optionC = document.getElementById('choice_text3')
+const optionD = document.getElementById('choice_text4')
+
+const submitBtn = document.getElementById('button')
+
+let currentQuiz = 0;
+let score = 0;
+
+loadQuiz()
+
+function loadQuiz() {
+
+    deselectAnswers()
+    const currentQuizData = data[currentQuiz]
+
+    questionEl.innerText = currentQuizData.question
+    optionA.innerText = currentQuizData.a
+    optionB.innerText = currentQuizData.b
+    optionC.innerText = currentQuizData.c
+    optionD.innerText = currentQuizData.d
+
+}
+
+function deselectAnswers() {
+    answerEls.forEach((answerEl) => (
+        answerEl.checked = false))
+}
+
+function getSelect() {
+    let answer
+    answerEls.forEach((answerEl) => {
+        if (answerEl.checked)
+            answer = answerEl.id
+    })
+    return answer;
+}
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    if (answer) {
+        if (answer === data[currentQuiz].correct) {
+            score++
+        }
+        currentQuiz++
+        if (currentQuiz < data.length) {
+            loadQuiz()
+        } else {
+            quiz.innerHTML = `You answered ${score}/${data.length}questions correctly`
+        }
+    }
+})

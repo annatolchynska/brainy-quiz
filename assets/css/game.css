@@ -13,16 +13,22 @@
 #progressText {
     font-size: 20px;
     text-shadow: 5px 5px 8px #023020;
+    color:#6E260E;
+    padding: 15px;
+
 }
-.hud-prefix {
-    font-size: 30px;
+#current-score {
+    font-size: 20px;
     padding: 20px;
     text-shadow: 5px 5px 8px #023020;
+    color:#6E260E;
+    
 }
 
 #score-number {
-    padding-left: 60px;
+    padding-left: 40px;
     text-shadow: 5px 5px 8px #023020;
+    color:#6E260E;
 }
 
 /* question section */
@@ -32,7 +38,7 @@
     font-size: 40px;
 }
 
-.choice {
+#choice_text1, #choice_text2, #choice_text3, #choice_text4  {
     display: flex;
     width: 80%;
     margin-bottom: 15px;
@@ -40,30 +46,51 @@
     padding-left: 50px;
     font-size: 40px;
     text-align: center;
+    border-style: none;
     border-radius: 40px;
     box-shadow: 15px 15px 15px 5px gray;
 }
 
-.choice:hover {
+#choice_text1:hover, #choice_text2:hover, #choice_text3:hover, #choice_text4:hover  {
     cursor: pointer;
     border: 2px solid #6E260E;
     box-shadow: none;
 
 }
-.correct {
-    background: rgba(46, 204, 113, .5);
+
+#button{
+    display: flex;
+    text-align: center;
+    border: 2px solid #6E260E;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-left: 240px;
+    width: 40%;
+    border-radius: 20px;
+    padding-left: 40px;
+    box-shadow: 15px 15px 15px 5px gray;
+
 }
-.incorrect {
-    background: rgba(128, 0, 0, .5);
+#button:hover {
+box-shadow: none;
+border-style: none;
 }
+
+
 /* for sreens size from 700px and down */
 @media screen and (max-width: 700px){
 #question {
     
     font-size: 30px;
 }
-#choice {
+#choice_text1, #choice_text2, #choice_text3, #choice_text4 {
     font-size: 25px;
-    margin-left: 25px;
+    margin-left: 20px;
     float: left;
-}}
+}
+#button {
+    font-size: 20px;
+    float: left;
+    margin-left: 20px;
+}
+}
