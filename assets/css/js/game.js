@@ -103,16 +103,27 @@ const data = [{
     },
 ];
 const welcome = document.getElementById("welcome")
-const quiz = document.getElementById('quiz');
+const quiz = document.getElementById('quiz')
+const score = document.getElementById('score')
 
 
  function toggle ()
  {if (welcome.style.display === "block"){ welcome.style.display = "none";
-} else welcome.style.display = "block";
-if ( welcome.style.display === "none") {quiz.style.display = "block";
+} else {welcome.style.display = "block";}
+if (welcome.style.display === "none") {quiz.style.display = "block";
 } else {quiz.style.display = "none";
     
 }
+ }
+ function myFunction ()
+ {
+    if (quiz.style.display === "block"){quiz.style.display = "none";}else {quiz.style.display = "block";}
+    if (quiz.style.display === "none"){score.style.display = "block"}else {score.style.display ="none;"}
+ }
+ function myFunction1 ()
+ {
+    if (score.style.display === "block"){score.style.display = "none";}else {score.style.display = "block";}
+    if (score.style.display === "none"){welcome.style.display = "block"}else {welcome.style.display ="none;"}
  }
 
 
@@ -130,7 +141,7 @@ const optionD = document.getElementById('choice_text4')
 const submitBtn = document.getElementById('button')
 
 let currentQuiz = 0;
-let score = 0;
+
 
 
 
