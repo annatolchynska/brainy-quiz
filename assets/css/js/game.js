@@ -102,9 +102,23 @@ const data = [{
 
     },
 ];
-const targetDiv = document.getElementsByClassName("display")
-const btn = document.getElementsByClassName('btn')
+const welcome = document.getElementById("welcome")
 const quiz = document.getElementById('quiz');
+
+
+ function toggle ()
+ {if (welcome.style.display === "block"){ welcome.style.display = "none";
+} else welcome.style.display = "block";
+if ( welcome.style.display === "none") {quiz.style.display = "block";
+} else {quiz.style.display = "none";
+    
+}
+ }
+
+
+
+
+
 const answerEls = document.querySelectorAll('.choice_text')
 const questionEl = document.getElementById('question')
 const userName = document.getElementById('username')
@@ -118,13 +132,8 @@ const submitBtn = document.getElementById('button')
 let currentQuiz = 0;
 let score = 0;
 
-btn.onclick = function () {
-    if (targetDiv.style.display !== "none") {
-        targetDiv.style.display = "none";
-    } else {
-        targetDiv.style.display = "block";
-    }
-};
+
+
 loadQuiz()
 
 

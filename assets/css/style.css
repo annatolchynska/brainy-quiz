@@ -10,7 +10,9 @@
     background-size: cover;
 }
 
-/* logo and the name */
+#welcome {
+    display:block;
+}
 .display {
     text-align: center;
 }
@@ -50,12 +52,12 @@ h4 {
 #username {
     font-size:30px;
     text-decoration: none;
-    color:#bb44f4;
+    color:#f4447d;
     border: 3px solid white;
     border-radius: 60px;
     box-shadow: 15px 15px 5px gray;
     padding-left: 15px;
-    margin-left: 450px;
+     
     
 }
 .btn {
@@ -67,7 +69,6 @@ h4 {
     box-shadow: 15px 15px 5px gray;
     padding-left: 50px;
     padding-right: 50px;
-    margin-left: 550px;
    margin-bottom: 50px;
 }
 
@@ -97,6 +98,9 @@ h3{
 }}
 
 /* quiz-game div*/
+#quiz {
+    display: none;
+}
 #progressText {
     font-size: 20px;
     text-shadow: 5px 5px 8px #023020;
@@ -116,6 +120,11 @@ h3{
     padding-left: 40px;
     text-shadow: 5px 5px 8px #023020;
     color:#44f4bb;
+}
+
+/* score div */
+#score {
+    display:none;
 }
 
 /* question section */
