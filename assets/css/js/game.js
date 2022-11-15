@@ -102,10 +102,12 @@ const data = [{
 
     },
 ];
-
+const targetDiv = document.getElementsByClassName("display")
+const btn = document.getElementsByClassName('btn')
 const quiz = document.getElementById('quiz');
 const answerEls = document.querySelectorAll('.choice_text')
 const questionEl = document.getElementById('question')
+const userName = document.getElementById('username')
 const optionA = document.getElementById('choice_text1')
 const optionB = document.getElementById('choice_text2')
 const optionC = document.getElementById('choice_text3')
@@ -116,7 +118,15 @@ const submitBtn = document.getElementById('button')
 let currentQuiz = 0;
 let score = 0;
 
+btn.onclick = function () {
+    if (targetDiv.style.display !== "none") {
+        targetDiv.style.display = "none";
+    } else {
+        targetDiv.style.display = "block";
+    }
+};
 loadQuiz()
+
 
 function loadQuiz() {
 
@@ -135,6 +145,7 @@ function deselectAnswers() {
     answerEls.forEach((answerEl) => (
         answerEl.checked = false))
 }
+
 function getSelect() {
     let answer
     answerEls.forEach((answerEl) => {

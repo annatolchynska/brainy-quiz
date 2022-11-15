@@ -11,14 +11,58 @@
 </head>
 
 <body>
-    <section class="container">
-        <div>
+    <!--first displaying div-->
+        <div id="welcome" class = display>
             <h1> WELCOME TO QUIZ GAME </h1>
             <h2><span>&#129299</span> BRAINY <span>&#129299</span></h2>
-            <h3> READY..STEADY..</h3>
-            <a href="/game.html" id="btn">GO! </a>
+            <form class = "user-name">
+                <h3 id ="user-name">create your username below to start the game</h3>
+                <input type = "text" name ="name" id ="username" placeholder ="Username">
+            </form>
+            <h4> READY..STEADY..</h4>
+            <button class="btn">GO! </button>
         </div>
-    </section>
+    </div>
+    <!--second displaying div-->
+    <div class="display" id="quiz">
+        <div class="score-item">
+            <p id="progressText">
+                Question
+            </p>
+            <div id="progressBar">
+                <div id="progressBarFull"></div>
+            </div>
+        </div>
+        <div class="score-item">
+            <p id="current-score"> SCORE <span> &#128396</span></p>
+            <h1 class="main-text" id="score-number">0</h1>
+        </div>
+        <div id="questions">
+            <h1 id="question"> Insert your question here</h1>
+        </div>
+        <div class="answer">
+            <p id="choice_text1">1</p>
+        </div>
+        <div class="answer">
+            <p id="choice_text2">2</p>
+        </div>
+        <div class="answer">
+            <p id="choice_text3">3</p>
+        </div>
+        <div class="answer">
+            <p id="choice_text4">4</p>
+            <!--button to go to the next question-->
+            <button id="button">NEXT QUESTION</button>
+            <button class="btn" >SUBMIT</button>
+        </div>
+        
+    </div>
+    <!--third displaying div-->
+    <div class ="display">
+        <h1>Let's see how much of an Einstein you are!</h1>
+         <p>TOTAL SCORE</p>
+        <button class="btn">PLAY AGAIN</button>
+    </div>
     <script src="assets/css/js/game.js"></script>
 </body>
 
