@@ -1,136 +1,131 @@
 /* questions-answers*/
 const data = [{
         question: 'What part of human body cannot heal itself?',
-        a: 'Skin',
-        b: 'Liver',
-        c: 'Teeth',
-        d: 'Bones',
-        correct: "c",
+        options: ['Skin', 'Liver', 'Teeth', 'Bones'],
+        correct: 2
     },
     {
         question: "It's illegal to own just one species of this animal in Switzerland.",
-        a: 'Dog',
-        b: 'Parrot',
-        c: 'Lizzard',
-        d: 'Guinea pig',
-        correct: "d",
+        options: ['Dog', 'Parrot', 'Lizzard', 'Guinea pig'],
+        correct: 3,
     },
 
     {
         question: "The anthem of this country has no lyrics.",
-        a: 'Ukraine',
-        b: 'Spain',
-        c: 'Malta',
-        d: 'Tanzania',
-        correct: "b",
+        options: ['Ukraine', 'Spain', 'Malta', 'Tanzania'],
+        correct: 1
 
 
     }, {
         question: "Who designed chupa chups logo?",
-        a: 'Andy Warhol',
-        b: 'Salvador Dali',
-        c: 'Pablo Picasso',
-        d: 'Jean-Michelle Basquiat',
-        correct: "b",
+        options: ['Andy Warhol', 'Salvador Dali', 'Pablo Picasso', 'Jean-Michelle Basquiat'],
+        correct: 1
 
 
     }, {
         question: "The largest organ of human body is...",
-        a: 'Skin',
-        b: 'Tongue',
-        c: 'Lungs',
-        d: 'Intestines',
-        correct: "a",
+        options: ['Skin', 'Tongue', 'Lungs', 'Intestines'],
+        correct: 0
 
 
     }, {
         question: "What animal's eye is bigger than its brain?",
-        a: 'Sloth',
-        b: 'Ostrich',
-        c: 'Whale',
-        d: 'Schrimp',
-        correct: "b",
+        options: ['Sloth', 'Ostrich', 'Whale','Schrimp'],
+        correct: 1
 
 
     }, {
         question: "What's the smallest country in the World?",
-        a: 'Lichtenstein',
-        b: 'Luxembourg',
-        c: 'Vatican',
-        d: 'Andorra',
-        correct: "c",
+        options: ['Lichtenstein','Luxembourg', 'Vatican', 'Andorra'],
+        correct: 2
 
     }, {
         question: "What is the only flying mammal?",
-        a: 'Ostrich',
-        b: 'Bat',
-        c: 'Chicken',
-        d: 'Flying squirrells',
-        correct: "b",
+        options: ['Ostrich','Bat', 'Chicken', 'Flying squirrells'],
+        correct: 1
 
     }, {
         question: "What mammal doesn't have a stomach?",
-        a: 'Whale',
-        b: 'Platypus',
-        c: 'Wombat',
-        d: 'Armadillo',
-        correct: "b",
+        options: ['Whale', 'Platypus', 'Wombat', 'Armadillo'],
+        correct: 1
 
     }, {
         question: "What is the deadliest animal in the world?",
-        a: 'Crocodile',
-        b: 'Shark',
-        c: 'Mosquito',
-        d: 'Cobra',
-        correct: "c",
+        options: ['Crocodile', 'Shark', 'Mosquito', 'Cobra'],
+        correct: 2
 
     }, {
         question: "What is the tallest building in the world?",
-        a: 'The Burg Khalifa in Dubai',
-        b: 'The Empire State Building in New York ',
-        c: 'The Shanghai Tower in Shanghai',
-        d: 'The One World Trade Center in New York',
-        correct: "a",
+        options: ['The Burg Khalifa in Dubai', 'The Empire State Building in New York ', 'The Shanghai Tower in Shanghai', 'The One World Trade Center in New York'],
+        correct: 0
 
     }, {
         question: "What country does have the biggest number of pyramids in the world?",
-        a: 'Sudan',
-        b: 'Egypt',
-        c: 'China',
-        d: 'Mexico',
-        correct: "a",
+        options:['Sudan', 'Egypt', 'China','Mexico'],
+        correct: 0
 
     },
 ];
+
+/* functions for buttons to show different divs (game-sections)*/
+
 const welcome = document.getElementById("welcome")
 const quiz = document.getElementById('quiz')
-const score = document.getElementById('score')
+const scoreDiv = document.getElementById('score')
 
-
- function toggle ()
- {if (welcome.style.display === "block"){ welcome.style.display = "none";
-} else {welcome.style.display = "block";}
-if (welcome.style.display === "none") {quiz.style.display = "block";
-} else {quiz.style.display = "none";
-    
+function myFunction() {
+    if (welcome.style.display === "block") {
+        welcome.style.display = "none";
+    } else {
+        welcome.style.display = "block";
+    }
+    if (welcome.style.display === "none") {
+        quiz.style.display = "block";
+    } else {
+        quiz.style.display = "none";
+    }
 }
- }
- function myFunction ()
- {
-    if (quiz.style.display === "block"){quiz.style.display = "none";}else {quiz.style.display = "block";}
-    if (quiz.style.display === "none"){score.style.display = "block"}else {score.style.display ="none;"}
- }
- function myFunction1 ()
- {
-    if (score.style.display === "block"){score.style.display = "none";}else {score.style.display = "block";}
-    if (score.style.display === "none"){welcome.style.display = "block"}else {welcome.style.display ="none;"}
- }
 
+function myFunction1() {
+    if (quiz.style.display === "block") {
+        quiz.style.display = "none";
+    } else {
+        quiz.style.display = "block";
+    }
+    if (quiz.style.display === "none") {
+        scoreDiv.style.display = "block"
+    } else {
+        score.style.display = "none;"
+    }
+}
 
+function myFunction2() {
+    if (scoreDiv.style.display === "block") {
+        scoreDiv.style.display = "none";
+    } else {
+        scoreDiv.style.display = "block";
+    }
+    if (scoreDiv.style.display === "none") {
+        quiz.style.display = "block"
+    } else {
+        quiz.style.display = "none;"
+    }
+}
 
+function myFunction3() {
+    if (scoreDiv.style.display === "block") {
+        scoreDiv.style.display = "none";
+    } else {
+        scoreDiv.style.display = "block";
+    }
+    if (scoreDiv.style.display === "none") {
+        welcome.style.display = "block"
+    } else {
+        welcome.style.display = "none;"
+    }
+}
 
-
-const answerEls = document.querySelectorAll('.choice_text')
+const answerEls = document.querySelector('.answer')
 const questionEl = document.getElementById('question')
 const userName = document.getElementById('username')
 const optionA = document.getElementById('choice_text1')
@@ -138,39 +133,29 @@ const optionB = document.getElementById('choice_text2')
 const optionC = document.getElementById('choice_text3')
 const optionD = document.getElementById('choice_text4')
 
-const submitBtn = document.getElementById('button')
 
-let currentQuiz = 0;
+let questionCounter = 0;
+let currentQuiz;
+let availableQuestions = []
 
-
-
-
-loadQuiz()
-
-
-function loadQuiz() {
-
-    deselectAnswers()
-    const currentQuizData = data[currentQuiz]
-
-    questionEl.innerText = currentQuizData.question
-    optionA.innerText = currentQuizData.a
-    optionB.innerText = currentQuizData.b
-    optionC.innerText = currentQuizData.c
-    optionD.innerText = currentQuizData.d
-
+function setAvailableQuestions ()
+{
+const totalQuestions = data.length;
+for (let i = 0; i < data.length; i++){
+    availableQuestions.push(data[i])
+}
+}
+function getNewQuestion () {
+const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
+currentQuestion = questionIndex;
+questionEl.innerHTML = currentQuestion.q;
+}
+questionCounter ++
+window.onload = function (){
+    setAvailableQuestions();
+    getNewQuestion ()
 }
 
-function deselectAnswers() {
-    answerEls.forEach((answerEl) => (
-        answerEl.checked = false))
-}
 
-function getSelect() {
-    let answer
-    answerEls.forEach((answerEl) => {
-        if (answerEl.checked)
-            answer = answerEl.id
-    })
-    return answer;
-}
+score = 0;
+
