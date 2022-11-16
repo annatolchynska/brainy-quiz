@@ -60,6 +60,9 @@ h4 {
      
     
 }
+#go{
+    color: #f4447d;
+}
 .btn {
     font-size: 40px;
     text-decoration: none;
@@ -115,16 +118,37 @@ h3{
     color:#44f4bb;
     
 }
+#button{
+    margin-top: 20px;
+}
 
 #score-number {
     padding-left: 40px;
     text-shadow: 5px 5px 8px #023020;
     color:#44f4bb;
 }
+#next {
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
 
 /* score div */
 #score {
     display:none;
+}
+#number {
+    color: #f4447d;
+    font-size: 30px;
+    margin:20px;
+}
+#back_btn {
+    font-size: 30px;
+    margin-right: 15px;
+}
+#start_btn {
+    font-size: 30px;
+    margin-left: 15px;
 }
 
 /* question section */
