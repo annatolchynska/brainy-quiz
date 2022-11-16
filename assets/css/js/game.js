@@ -1,68 +1,103 @@
 /* questions-answers*/
-const data = [{
+const questions = [{
         question: 'What part of human body cannot heal itself?',
-        options: ['Skin', 'Liver', 'Teeth', 'Bones'],
-        correct: 2
+        choice1:'Skin',
+        choice2:'Liver',
+        choice3: 'Teeth',
+        choice4: 'Bones',
+        answer: 3
     },
     {
         question: "It's illegal to own just one species of this animal in Switzerland.",
-        options: ['Dog', 'Parrot', 'Lizzard', 'Guinea pig'],
-        correct: 3,
+        choice1: 'Dog',
+        choice2: 'Parrot',
+        choice3: 'Lizzard',
+        choice4: 'Guinea pig',
+        answer: 4,
     },
 
     {
         question: "The anthem of this country has no lyrics.",
-        options: ['Ukraine', 'Spain', 'Malta', 'Tanzania'],
-        correct: 1
+        choice1: 'Ukraine', 
+        choice2:'Spain', 
+        choice3:'Malta', 
+        choice4:'Tanzania',
+        answer: 2
 
 
     }, {
         question: "Who designed chupa chups logo?",
-        options: ['Andy Warhol', 'Salvador Dali', 'Pablo Picasso', 'Jean-Michelle Basquiat'],
-        correct: 1
-
+        choice1: 'Andy Warhol',
+        choice2: 'Salvador Dali', 
+        choice3:'Pablo Picasso', 
+        choice4:'Jean-Michelle Basquiat',
+        answer: 2
 
     }, {
         question: "The largest organ of human body is...",
-        options: ['Skin', 'Tongue', 'Lungs', 'Intestines'],
-        correct: 0
+        choice1:'Skin', 
+        choice2:'Tongue', 
+        choice3:'Lungs', 
+        choice4:'Intestines',
+        answer: 1
 
 
     }, {
         question: "What animal's eye is bigger than its brain?",
-        options: ['Sloth', 'Ostrich', 'Whale','Schrimp'],
-        correct: 1
+        choice1:'Sloth', 
+        choice2:'Ostrich', 
+        choice3:'Whale',
+        choice4:'Schrimp',
+        answer: 2
 
 
     }, {
         question: "What's the smallest country in the World?",
-        options: ['Lichtenstein','Luxembourg', 'Vatican', 'Andorra'],
-        correct: 2
+        choice1:'Lichtenstein',
+        choice2:'Luxembourg', 
+        choice3:'Vatican', 
+        choice4:'Andorra',
+        answer: 3
 
     }, {
         question: "What is the only flying mammal?",
-        options: ['Ostrich','Bat', 'Chicken', 'Flying squirrells'],
-        correct: 1
+        choice1:'Ostrich',
+        choice2:'Bat', 
+        choice3:'Chicken',
+        choice4: 'Flying squirrells',
+        answer: 2
 
     }, {
         question: "What mammal doesn't have a stomach?",
-        options: ['Whale', 'Platypus', 'Wombat', 'Armadillo'],
-        correct: 1
+        choice1:'Whale', 
+        choice2:'Platypus', 
+        choice3:'Wombat', 
+        choice4:'Armadillo',
+        answer: 2
 
     }, {
         question: "What is the deadliest animal in the world?",
-        options: ['Crocodile', 'Shark', 'Mosquito', 'Cobra'],
-        correct: 2
+        choice1:'Crocodile', 
+        choice2:'Shark', 
+        choice3:'Mosquito', 
+        choice4:'Cobra',
+        answer: 3
 
     }, {
         question: "What is the tallest building in the world?",
-        options: ['The Burg Khalifa in Dubai', 'The Empire State Building in New York ', 'The Shanghai Tower in Shanghai', 'The One World Trade Center in New York'],
-        correct: 0
+        choice1:'The Burg Khalifa in Dubai', 
+        choice2:'The Empire State Building in New York ', 
+        choice3:'The Shanghai Tower in Shanghai',
+        choice4: 'The One World Trade Center in New York',
+        answer: 1
 
     }, {
         question: "What country does have the biggest number of pyramids in the world?",
-        options:['Sudan', 'Egypt', 'China','Mexico'],
-        correct: 0
+        choice1:'Sudan',
+        choice2: 'Egypt', 
+        choice3:'China',
+        choice4:'Mexico',
+        answer: 1
 
     },
 ];
@@ -84,6 +119,7 @@ function myFunction() {
     } else {
         quiz.style.display = "none";
     }
+
 }
 
 function myFunction1() {
@@ -125,18 +161,81 @@ function myFunction3() {
     }
 }
 
-const answerEls = document.querySelector('.answer')
-const questionEl = document.getElementById('question')
-const userName = document.getElementById('username')
-const optionA = document.getElementById('choice_text1')
-const optionB = document.getElementById('choice_text2')
-const optionC = document.getElementById('choice_text3')
-const optionD = document.getElementById('choice_text4')
-const score = document.getElementById('current-score')
-const currentQuestionNumber = document.getElementById('progressBar')
 
+const question = document.getElementById('question');
+const choices = Array.from(document.querySelectorAll('.choice-text'));
+const progressText = document.getElementById('progressText');
+const scoreText = document.getElementById('score-number');
+const progressBarFull = document.getElementById('progressBarFull');
 
-function loadQuiz () {
-    
+let currentQuestion = {}
+let acceptingAnswers = true
+let score = 0
+let questionCounter = 0
+let availableQuestions = []
+
+const SCORE_POINTS = 1
+const MAX_QUESTIONS = 10
+
+let startGame = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+}
+let getNewQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign('end.html')
+    }
+    questionCounter++
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    currentQuestion = availableQuestions[questionsIndex]
+    question.innerText = currentQuestion.question
+
+    choices.forEach(choice => {
+        const number = choice.dataset.number
+        choice.innerText = currentQuestion['choice' + number]
+    })
+
+    availableQuestions.splice(questionsIndex, 1)
+
+    acceptingAnswers = true
+}
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if (!acceptingAnswers) return
+
+        acceptingAnswers = false
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset.number
+
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+        const correctAnswer = choices[currentQuestion.answer - 1]
+        if (classToApply === 'correct') {
+            incrementScore(SCORE_POINTS)
+        } else if (classToApply === 'incorrect') {
+            correctAnswer.parentElement.classList.add('correct')
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply)
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            correctAnswer.parentElement.classList.remove('correct')
+            getNewQuestion()
+
+        }, 10)
+    })
+})
+
+let incrementScore = num => {
+    score += num
+    scoreText.innerText = score
 }
 
+startGame()

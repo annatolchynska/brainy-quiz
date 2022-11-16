@@ -19,7 +19,7 @@
         <h2><span>&#129299</span> BRAINY <span>&#129299</span></h2>
         <form class="user-name">
             <h3 id="user-name">create your username below to start the game</h3>
-            <input type="text" name="name" id="username" placeholder="Username">
+            <input type="text" name="name" id="username" placeholder="Username" required>
         </form>
         <h4> READY..STEADY..</h4>
         <button onclick="myFunction()" class="btn" id="go">GO! </button>
@@ -44,16 +44,16 @@
             <h1 id="question"> Insert your question here</h1>
         </div>
         <div class="answer">
-            <p id="choice_text1">1</p>
+            <p class="choice-text" data-number="1">1</p>
         </div>
         <div class="answer">
-            <p id="choice_text2">2</p>
+            <p class="choice-text" data-number="2">2</p>
         </div>
         <div class="answer">
-            <p id="choice_text3">3</p>
+            <p class="choice-text" data-number="3">3</p>
         </div>
         <div class="answer">
-            <p id="choice_text4">4</p>
+            <p class="choice-text" data-number="4">4</p>
             <!--button to go to the next question-->
             <button id="button">NEXT QUESTION</button>
             <button onclick="myFunction1()" class="btn" id="next">SUBMIT</button>

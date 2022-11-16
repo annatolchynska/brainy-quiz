@@ -98,7 +98,7 @@ h4 {
 }
 
 #current-score {
-    font-size: 20px;
+    font-size: 40px;
     padding: 20px;
     text-shadow: 5px 5px 8px #023020;
     color: #44f4bb;
@@ -107,8 +107,9 @@ h4 {
 
 #score-number {
     padding-left: 40px;
-    text-shadow: 5px 5px 8px #023020;
+    text-shadow: 2px 2px gray;
     color: #44f4bb;
+    font-size: 30px;
 }
 
 /* question section */
@@ -116,29 +117,25 @@ h4 {
 #question {
     text-align: center;
     font-size: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
-#choice_text1,
-#choice_text2,
-#choice_text3,
-#choice_text4 {
+.choice-text {
     display: flex;
     width: 80%;
     margin-bottom: 15px;
-    margin-left: 120px;
+    margin-left: 30px;
     padding-left: 50px;
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
     border-style: none;
     border-radius: 40px;
-    box-shadow: 0 0 15px 15px gray;
+    box-shadow: 0 0 10px 10px gray;
     color: #f4447d;
+   
 }
-
-#choice_text1:hover,
-#choice_text2:hover,
-#choice_text3:hover,
-#choice_text4:hover {
+.choice-text:hover {
     cursor: pointer;
     border: 2px solid white;
     box-shadow: none;
@@ -248,14 +245,11 @@ h4 {
         font-size: 30px;
     }
 
-    #choice_text1,
-    #choice_text2,
-    #choice_text3,
-    #choice_text4 {
+    .choice-text {
         font-size: 25px;
         margin-left: 20px;
         float: left;
-        width:100%;
+        width: 70%;
     }
 
     /* for sreens size from 600px and down */
@@ -279,63 +273,69 @@ h4 {
         padding-right: 10px;
     }
 }
+
 /* for sreens size from 400px and down */
 @media screen and (max-width: 400px) {
-    #username{
+    #username {
         font-size: 20px;
         margin-left: 15px;
-                margin-right: 15px;
+        margin-right: 15px;
     }
+
     #go {
         font-size: 30px;
-            }
-            h1{
-                font-size: 30px;
-                margin-left: 15px;
-                margin-right: 15px;
-                text-shadow: 1px 1px gray;
-            }
-            h2{
-                font-size: 30px;
-            }
-            h3{
-                font-size: 25px;
-                margin-left: 15px;
-                margin-right: 15px;
-                
-            }
-            h4 {
-                font-size: 30px;
-                margin-left: 15px;
-                margin-right: 15px;
-            }
-            #choice_text1,
-    #choice_text2,
-    #choice_text3,
-    #choice_text4 {
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-shadow: 1px 1px gray;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
+
+    h4 {
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .choice-text {
         font-size: 20px;
         margin-left: 20px;
         margin-right: 50px;
         float: left;
-        width:100%;
+        width: 70%;
     }
 
-#button {
-    text-align: justify;
-    font-size: 15px;
-    margin-top: 30px;
-    box-shadow: 0 0 10px 10px #bb44f4;
-}
-#back_btn {
-    font-size: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    text-shadow: none;
-}
-#start_btn {
-    font-size: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    text-shadow: none;
-}
+    #button {
+        text-align: justify;
+        font-size: 15px;
+        margin-top: 30px;
+        box-shadow: 0 0 10px 10px #bb44f4;
+    }
+
+    #back_btn {
+        font-size: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-shadow: none;
+    }
+
+    #start_btn {
+        font-size: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-shadow: none;
+    }
 }
