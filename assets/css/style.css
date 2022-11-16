@@ -12,9 +12,6 @@
 
 #welcome {
     display: block;
-}
-
-.display {
     text-align: center;
 }
 
@@ -94,22 +91,28 @@ h4 {
     text-shadow: 5px 5px 8px #023020;
     color: #44f4bb;
     padding: 15px;
+    float: left;
 
 }
-
+#progressBar {
+    margin:20px;
+}
 #current-score {
-    font-size: 40px;
+    font-size: 30px;
     padding: 20px;
-    text-shadow: 5px 5px 8px #023020;
-    color: #44f4bb;
-
+    text-shadow: 5px 5px 8px #f4447d;
+    color: #bb44f4;
+ 
+  
 }
 
 #score-number {
-    padding-left: 40px;
+    padding:15px;
     text-shadow: 2px 2px gray;
     color: #44f4bb;
     font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /* question section */
@@ -119,22 +122,27 @@ h4 {
     font-size: 40px;
     margin-right: 20px;
     margin-left: 20px;
+    padding: 15px;
 }
 
 .choice-text {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin-bottom: 15px;
     margin-left: 30px;
-    padding-left: 50px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 25px;
     text-align: center;
     border-style: none;
     border-radius: 40px;
     box-shadow: 0 0 10px 10px gray;
     color: #f4447d;
-   
+    text-shadow: 1px 1px white;
+
 }
+
 .choice-text:hover {
     cursor: pointer;
     border: 2px solid white;
@@ -142,37 +150,21 @@ h4 {
 
 }
 
-/* next question button */
-#button {
-    display: flex;
-    border: 2px solid #bb44f4;
-    font-size: 30px;
-    margin-top: 20px;
-    margin-left: 240px;
-    width: 40%;
-    border-radius: 40px;
-    padding-left: 20px;
-    box-shadow: 0 0 10px 10px #bb44f4;
-    color: #bb44f4;
 
-}
-
-#button:hover {
-    box-shadow: none;
-    border-style: none;
-}
 
 /* submit button */
 #next {
     font-size: 30px;
     margin-bottom: 30px;
     margin-top: 40px;
+    margin-left: 45%;
     box-shadow: 0 0 15px 15px #44f4bb;
     border-radius: 40px;
     color: #f4447d;
     padding-left: 10px;
     padding-right: 10px;
     border: 2px solid #44f4bb;
+    text-align: center;
 }
 
 #next:hover {
@@ -244,7 +236,9 @@ h4 {
 
         font-size: 30px;
     }
-
+#next {
+    margin-left: 20px;
+}
     .choice-text {
         font-size: 25px;
         margin-left: 20px;
@@ -267,12 +261,7 @@ h4 {
         }
     }
 
-    #button {
-        font-size: 20px;
-        margin-left: 15px;
-        padding-right: 10px;
-    }
-}
+   }
 
 /* for sreens size from 400px and down */
 @media screen and (max-width: 400px) {
@@ -318,13 +307,9 @@ h4 {
         width: 70%;
     }
 
-    #button {
-        text-align: justify;
-        font-size: 15px;
-        margin-top: 30px;
-        box-shadow: 0 0 10px 10px #bb44f4;
-    }
-
+#next {
+    margin-left: 15px;
+}
     #back_btn {
         font-size: 20px;
         margin-left: 15px;
