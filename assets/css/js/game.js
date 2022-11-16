@@ -136,7 +136,7 @@ const score = document.getElementById('current-score')
 const currentQuestionNumber = document.getElementById('progressBar')
 
 
-function getQuestion () {
-    questionEl.innerHTML = data.question
+function loadQuiz () {
+    
 }
 
