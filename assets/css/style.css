@@ -21,6 +21,7 @@
 h1 {
     font-size: 40px;
     color: #44f4bb;
+    text-shadow: 3px 3px gray;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -29,6 +30,7 @@ h1 {
 h2 {
     font-size: 60px;
     color: #bb44f4;
+    text-shadow: 2px 2px #f4447d;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -37,6 +39,7 @@ h2 {
 h3 {
     font-size: 30px;
     color: #bb44f4;
+    text-shadow: 2px 2px #f4447d;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 50px;
@@ -46,6 +49,7 @@ h4 {
 
     font-size: 40px;
     color: #bb44f4;
+    text-shadow: 2px 2px #f4447d;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 15px;
@@ -56,9 +60,9 @@ h4 {
     font-size: 30px;
     text-decoration: none;
     color: #f4447d;
-    border: 3px solid white;
+    border: 3px solid #bb44f4;
     border-radius: 60px;
-    box-shadow: 0 0 15px 15px gray;
+    box-shadow: 0 0 15px 10px #bb44f4;
     padding-left: 15px;
 
 }
@@ -79,28 +83,6 @@ h4 {
 }
 
 
-/* media queries */
-/* for sreens size from 950px and down */
-@media screen and (max-width: 950px) {
-    h1 {
-        font-size: 50px;
-    }
-}
-
-/* for sreens size from 600px and down */
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-
-    h3 {
-        font-size: 30px;
-    }
-}
 
 /* quiz-game div*/
 #quiz {
@@ -166,14 +148,13 @@ h4 {
 /* next question button */
 #button {
     display: flex;
-    text-align: center;
     border: 2px solid #bb44f4;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-top: 20px;
     margin-left: 240px;
     width: 40%;
-    border-radius: 20px;
-    padding-left: 40px;
+    border-radius: 40px;
+    padding-left: 20px;
     box-shadow: 0 0 10px 10px #bb44f4;
     color: #bb44f4;
 
@@ -218,10 +199,11 @@ h4 {
     margin-right: 15px;
     box-shadow: 0 0 15px 15px #bb44f4;
     color: #f4447d;
+    text-shadow: 2px 2px #bb44f4;
     margin-top: 30px;
     border-radius: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: 2px solid #bb44f4;
 }
 
@@ -236,10 +218,11 @@ h4 {
     margin-left: 15px;
     box-shadow: 0 0 15px 15px #f4447d;
     color: #bb44f4;
+    text-shadow: 2px 2px #f4447d;
     margin-top: 30px;
     border-radius: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: 2px solid #f4447d;
 }
 
@@ -249,6 +232,13 @@ h4 {
 
 }
 
+/* media queries */
+/* for sreens size from 950px and down */
+@media screen and (max-width: 950px) {
+    h1 {
+        font-size: 50px;
+    }
+}
 
 
 /* for sreens size from 700px and down */
@@ -265,11 +255,87 @@ h4 {
         font-size: 25px;
         margin-left: 20px;
         float: left;
+        width:100%;
+    }
+
+    /* for sreens size from 600px and down */
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
     }
 
     #button {
         font-size: 20px;
-        float: left;
-        margin-left: 20px;
+        margin-left: 15px;
+        padding-right: 10px;
     }
+}
+/* for sreens size from 400px and down */
+@media screen and (max-width: 400px) {
+    #username{
+        font-size: 20px;
+        margin-left: 15px;
+                margin-right: 15px;
+    }
+    #go {
+        font-size: 30px;
+            }
+            h1{
+                font-size: 30px;
+                margin-left: 15px;
+                margin-right: 15px;
+                text-shadow: 1px 1px gray;
+            }
+            h2{
+                font-size: 30px;
+            }
+            h3{
+                font-size: 25px;
+                margin-left: 15px;
+                margin-right: 15px;
+                
+            }
+            h4 {
+                font-size: 30px;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            #choice_text1,
+    #choice_text2,
+    #choice_text3,
+    #choice_text4 {
+        font-size: 20px;
+        margin-left: 20px;
+        margin-right: 50px;
+        float: left;
+        width:100%;
+    }
+
+#button {
+    text-align: justify;
+    font-size: 15px;
+    margin-top: 30px;
+    box-shadow: 0 0 10px 10px #bb44f4;
+}
+#back_btn {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-shadow: none;
+}
+#start_btn {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-shadow: none;
+}
 }
