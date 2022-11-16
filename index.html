@@ -17,7 +17,10 @@
     <div id="welcome" class=display>
         <h1> WELCOME TO QUIZ GAME </h1>
         <h2><span>&#129299</span> BRAINY <span>&#129299</span></h2>
-    
+        <form class="user-name">
+            <h3 id="user-name">create your username below to start the game</h3>
+            <input type="text" id="username" placeholder="Username">
+            </form>
         
             <h4> READY..STEADY..</h4>
             <button onclick="myFunction()" type="button" class="btn" id="go"> GO! </button>
@@ -35,6 +38,9 @@
             <div id="progressBar">
                 <div id="progressBarFull"></div>
             </div>
+            <div class="timer">
+                <p id="timer"> <span> &#9203</span></p>
+            </div>
         </div>
         <div class="score-item">
             <p id="current-score"> SCORE <span> &#128396 </span>
@@ -42,6 +48,7 @@
              </p>
           
         </div>
+
         <div id="questions">
             <h1 id="question"> Insert your question here</h1>
         </div>
@@ -65,10 +72,7 @@
     <div class="display" id="score">
         <h1 id="einstein">Let's see how much of an Einstein you are!</h1>
         <p id="number">TOTAL SCORE</p>
-        <form class="user-name">
-            <h3 id="user-name">create your username below to start the game</h3>
-            <input type="text" id="username" placeholder="Username">
-            </form>
+    
         <button onclick="myFunction2()" class="btn" id="back_btn">TRY AGAIN</button>
         <button onclick="myFunction3()" class="btn" id="start_btn">START NEW GAME</button>
     </div>

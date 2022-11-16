@@ -86,6 +86,11 @@ h4 {
     display: none;
 }
 
+#timer
+{
+    font-size: 25px;
+    color: #bb44f4;
+}
 #progressText {
     font-size: 20px;
     text-shadow: 5px 5px 8px #023020;
