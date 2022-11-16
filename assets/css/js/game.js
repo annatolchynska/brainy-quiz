@@ -132,30 +132,11 @@ const optionA = document.getElementById('choice_text1')
 const optionB = document.getElementById('choice_text2')
 const optionC = document.getElementById('choice_text3')
 const optionD = document.getElementById('choice_text4')
+const score = document.getElementById('current-score')
+const currentQuestionNumber = document.getElementById('progressBar')
 
 
-let questionCounter = 0;
-let currentQuiz;
-let availableQuestions = []
-
-function setAvailableQuestions ()
-{
-const totalQuestions = data.length;
-for (let i = 0; i < data.length; i++){
-    availableQuestions.push(data[i])
+function getQuestion () {
+    questionEl.innerHTML = data.question
 }
-}
-function getNewQuestion () {
-const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
-currentQuestion = questionIndex;
-questionEl.innerHTML = currentQuestion.q;
-}
-questionCounter ++
-window.onload = function (){
-    setAvailableQuestions();
-    getNewQuestion ()
-}
-
-
-score = 0;
 
