@@ -108,6 +108,10 @@ const welcome = document.getElementById("welcome")
 const quiz = document.getElementById('quiz')
 const scoreDiv = document.getElementById('score')
 
+
+
+
+
 function myFunction() {
     if (welcome.style.display === "block") {
         welcome.style.display = "none";
@@ -162,6 +166,7 @@ function myFunction3() {
 }
 
 
+
 const question = document.getElementById('question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.getElementById('progressText');
@@ -170,7 +175,6 @@ const progressBarFull = document.getElementById('progressBarFull');
 
 let currentQuestion = {}
 let acceptingAnswers = true
-let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
@@ -239,3 +243,57 @@ let incrementScore = num => {
 }
 
 startGame()
+
+const username = document.getElementById('username');
+const saveScoreBtn = document.getElementById('back_btn');
+const finalScore = document.getElementById('number');
+const currentScore = localStorage.getItem('mostRecentScore');
+
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+
+number.innerHTML = score;
+
+/*
+This function was partially made using this tutorial from James Q Quick: https://youtu.be/DFhmNLKwwGw
+I modified it so that if the same user plays the quiz again and enters the same name their score
+gets updated instead of adding another entry to the leaderboard with the same name
+*/
+function saveHighScore(e) {
+    e.preventDefault();
+
+    const scoreObj = {
+        currentScore: currentScore,
+        name: username.value
+    };
+
+    for(let i = 0; i < highScores.length; i++) {
+        if(highScores[i].name === username.value && highScores[i].score < currentScore) {
+            highScores[i].score = currentScore;
+            localStorage.setItem('highScores', JSON.stringify(highScores));
+            alert("Score updated!");
+            return;
+        }
+    }
+
+    highScores.push(scoreObj);
+
+    highScores.sort((a, b) => b.currentScore - a.currentScore);
+
+    highScores.splice(5);
+
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+
+    alert('Score Saved!');
+}
+
+// Makes it so user can't click "Save Score" button until some value is entered
+username.addEventListener('keyup', () => {
+    saveScoreBtn.disabled = !username.value;
+});
+
+// Ran when "Save Score" button is clicked and disables the button also to prevent the user clicking it over and over
+saveScoreBtn.addEventListener('click', function (e) {
+    saveHighScore(e);
+    saveScoreBtn.disabled = true;
+});
