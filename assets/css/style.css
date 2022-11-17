@@ -60,7 +60,13 @@ h4 {
  margin-right: 15px;
  
 }
-
+#user-name 
+{
+    color: #44f4bb;
+    text-shadow: 2px 2px gray;
+    font-size: 30px;
+    margin-top: 10px;
+}
 #username {
     font-size: 30px;
     text-decoration: none;
