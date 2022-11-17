@@ -13,7 +13,7 @@
 <link rel="manifest" href="/site.webmanifest">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <title>Brainy quiz game</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -45,9 +45,7 @@
             <div id="progressBar">
                 <div id="progressBarFull"></div>
             </div>
-            <div class="timer">
-                <p id="timer"> <span> &#9203</span></p>
-            </div>
+        
         </div>
         <div class="score-item">
             <p id="current-score"> SCORE <span> &#128396 </span>
@@ -71,7 +69,10 @@
         <div class="answer">
             <p class="choice-text" data-number="4">4</p>
 
-            <button onclick="myFunction1()" class="btn" id="next">SUBMIT</button>
+            <div class="timer">
+                <p id="timer"> <span> &#9203</span></p>
+            </div>
+            <button onclick="myFunction1()" class="btn" id="next" id="timer"> <span> &#9203</span></button>
         </div>
 
     </div>

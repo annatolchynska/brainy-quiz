@@ -1,8 +1,8 @@
 /* questions-answers*/
 const questions = [{
         question: 'What part of human body cannot heal itself?',
-        choice1:'Skin',
-        choice2:'Liver',
+        choice1: 'Skin',
+        choice2: 'Liver',
         choice3: 'Teeth',
         choice4: 'Bones',
         answer: 3
@@ -15,137 +15,119 @@ const questions = [{
         choice4: 'Guinea pig',
         answer: 4,
     },
-
     {
         question: "The anthem of this country has no lyrics.",
-        choice1: 'Ukraine', 
-        choice2:'Spain', 
-        choice3:'Malta', 
-        choice4:'Tanzania',
+        choice1: 'Ukraine',
+        choice2: 'Spain',
+        choice3: 'Malta',
+        choice4: 'Tanzania',
         answer: 2
-
-
     }, {
         question: "Who designed chupa chups logo?",
         choice1: 'Andy Warhol',
-        choice2: 'Salvador Dali', 
-        choice3:'Pablo Picasso', 
-        choice4:'Jean-Michelle Basquiat',
+        choice2: 'Salvador Dali',
+        choice3: 'Pablo Picasso',
+        choice4: 'Jean-Michelle Basquiat',
         answer: 2
-
     }, {
         question: "The largest organ of human body is...",
-        choice1:'Skin', 
-        choice2:'Tongue', 
-        choice3:'Lungs', 
-        choice4:'Intestines',
+        choice1: 'Skin',
+        choice2: 'Tongue',
+        choice3: 'Lungs',
+        choice4: 'Intestines',
         answer: 1
-
-
     }, {
         question: "What animal's eye is bigger than its brain?",
-        choice1:'Sloth', 
-        choice2:'Ostrich', 
-        choice3:'Whale',
-        choice4:'Schrimp',
+        choice1: 'Sloth',
+        choice2: 'Ostrich',
+        choice3: 'Whale',
+        choice4: 'Schrimp',
         answer: 2
-
-
     }, {
         question: "What's the smallest country in the World?",
-        choice1:'Lichtenstein',
-        choice2:'Luxembourg', 
-        choice3:'Vatican', 
-        choice4:'Andorra',
+        choice1: 'Lichtenstein',
+        choice2: 'Luxembourg',
+        choice3: 'Vatican',
+        choice4: 'Andorra',
         answer: 3
-
     }, {
         question: "What is the only flying mammal?",
-        choice1:'Ostrich',
-        choice2:'Bat', 
-        choice3:'Chicken',
+        choice1: 'Ostrich',
+        choice2: 'Bat',
+        choice3: 'Chicken',
         choice4: 'Flying squirrells',
         answer: 2
 
     }, {
         question: "What mammal doesn't have a stomach?",
-        choice1:'Whale', 
-        choice2:'Platypus', 
-        choice3:'Wombat', 
-        choice4:'Armadillo',
+        choice1: 'Whale',
+        choice2: 'Platypus',
+        choice3: 'Wombat',
+        choice4: 'Armadillo',
         answer: 2
 
     }, {
         question: "What is the deadliest animal in the world?",
-        choice1:'Crocodile', 
-        choice2:'Shark', 
-        choice3:'Mosquito', 
-        choice4:'Cobra',
+        choice1: 'Crocodile',
+        choice2: 'Shark',
+        choice3: 'Mosquito',
+        choice4: 'Cobra',
         answer: 3
 
     }, {
         question: "What is the tallest building in the world?",
-        choice1:'The Burg Khalifa in Dubai', 
-        choice2:'The Empire State Building in New York ', 
-        choice3:'The Shanghai Tower in Shanghai',
+        choice1: 'The Burg Khalifa in Dubai',
+        choice2: 'The Empire State Building in New York ',
+        choice3: 'The Shanghai Tower in Shanghai',
         choice4: 'The One World Trade Center in New York',
         answer: 1
 
     }, {
         question: "What country does have the biggest number of pyramids in the world?",
-        choice1:'Sudan',
-        choice2: 'Egypt', 
-        choice3:'China',
-        choice4:'Mexico',
+        choice1: 'Sudan',
+        choice2: 'Egypt',
+        choice3: 'China',
+        choice4: 'Mexico',
         answer: 1
 
     },
     {
         question: "What is the only fish that can blink with both eyes?",
-        choice1:'dolphin',
-        choice2: 'shark', 
-        choice3:'whale',
-        choice4:'salmon',
+        choice1: 'dolphin',
+        choice2: 'shark',
+        choice3: 'whale',
+        choice4: 'salmon',
         answer: 2
-
     },
     {
         question: "What's the average time for a person to fall asleep?",
-        choice1:'1 hour',
-        choice2: '30 minutes', 
-        choice3:'7 minutes',
-        choice4:'17 minutes',
+        choice1: '1 hour',
+        choice2: '30 minutes',
+        choice3: '7 minutes',
+        choice4: '17 minutes',
         answer: 3
-
     },
     {
         question: "What do people actually see while looking at a bright sky and seeing white dots?",
-        choice1:'dust',
-        choice2: 'snow', 
-        choice3:'white blood cells in their body',
-        choice4:'brain cells',
+        choice1: 'dust',
+        choice2: 'snow',
+        choice3: 'white blood cells in their body',
+        choice4: 'brain cells',
         answer: 3
-
     },
     {
         question: "Which animal have rectangular pupil in their eye?",
-        choice1:'elephant',
-        choice2: 'goat', 
-        choice3:'koala',
-        choice4:'penguin',
+        choice1: 'elephant',
+        choice2: 'goat',
+        choice3: 'koala',
+        choice4: 'penguin',
         answer: 2
-
     },
 ];
-
 /* functions for buttons to show different divs (game-sections)*/
-
 const welcome = document.getElementById("welcome")
 const quiz = document.getElementById('quiz')
 const scoreDiv = document.getElementById('score')
-
-
-
 
 
 function myFunction() {
@@ -159,9 +141,7 @@ function myFunction() {
     } else {
         quiz.style.display = "none";
     }
-
 }
-
 function myFunction1() {
     if (quiz.style.display === "block") {
         quiz.style.display = "none";
@@ -175,7 +155,6 @@ function myFunction1() {
     }
 }
 
-
 function myFunction2() {
     if (scoreDiv.style.display === "block") {
         scoreDiv.style.display = "none";
@@ -188,8 +167,6 @@ function myFunction2() {
         welcome.style.display = "none;"
     }
 }
-
-
 
 const question = document.getElementById('question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
@@ -205,7 +182,22 @@ let availableQuestions = []
 const SCORE_POINTS = 1
 const MAX_QUESTIONS = 10
 
-let startGame = () => {
+let input = document.getElementById('username');
+let button = document.getElementById('go');
+/*enables go button only if Username is entered*/
+button.disabled = true; 
+
+input.addEventListener("change", stateHandle);
+
+function stateHandle() {
+    if (document.getElementById("username").value === "") {
+        button.disabled = true; alert ('Please enter username!')
+    } else {
+        button.disabled = false; 
+    }
+}
+
+ startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
@@ -216,7 +208,7 @@ let getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('end.html')
+        return window.location.assign('index.html')
     }
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
@@ -271,10 +263,9 @@ startGame()
 
 function timer() {
     let seconds = 60;
-    let timer = setInterval(function() {
+    let timer = setInterval (() => {
         document.getElementById('timer').innerHTML = seconds;
         seconds--;
         
-    }, 1000);} 
-
-    
+    }, 1000);
+}
