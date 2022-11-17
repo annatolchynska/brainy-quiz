@@ -17,15 +17,18 @@
     <div id="welcome" class=display>
         <h1> WELCOME TO QUIZ GAME </h1>
         <h2><span>&#129299</span> BRAINY <span>&#129299</span></h2>
+        <h3>RULES:</h3>
+        <p id="rules">You have 60 seconds to answer 10 random questions. Choose one answer for each question and see if
+            your IQ is equal to Einstein's :-) </p>
         <form class="user-name">
-            <h3 id="user-name">create your username below to start the game</h3>
+            <h4 id="user-name">create your username below to start the game</h4>
             <input type="text" id="username" placeholder="Username" disabled>
-            </form>
-        
-            <h4> READY..STEADY..</h4>
-            <button onclick="myFunction()" type="button" class="btn" id="go"> GO! </button>
-        
-        
+        </form>
+
+        <h4> READY..STEADY..</h4>
+        <button onclick="myFunction()" type="button" class="btn" id="go"> GO! </button>
+
+
     </div>
     </div>
 
@@ -45,8 +48,8 @@
         <div class="score-item">
             <p id="current-score"> SCORE <span> &#128396 </span>
                 <span class="main-text" id="score-number">0</span>
-             </p>
-          
+            </p>
+
         </div>
 
         <div id="questions">
@@ -63,18 +66,23 @@
         </div>
         <div class="answer">
             <p class="choice-text" data-number="4">4</p>
-           
+
             <button onclick="myFunction1()" class="btn" id="next">SUBMIT</button>
         </div>
 
     </div>
     <!--third displaying div-->
     <div class="display" id="score">
-        <h1 id="einstein">Let's see how much of an Einstein you are!</h1>
+        <h1 id="einstein">Let's see how BRAINY you are! <span> &#129504</span> </h1>
+        <ul id="IQ">
+            <li>7-10: Einstein level</li>
+            <li>5-7: Your random neighbor level</li>
+            <li>1-5: Homer Simpson level</li>
+        </ul>
         <p id="number">TOTAL SCORE</p>
-    
-        <button onclick="myFunction2()" class="btn" id="back_btn">TRY AGAIN</button>
-        <button onclick="myFunction3()" class="btn" id="start_btn">START NEW GAME</button>
+
+       
+        <button onclick="myFunction2()" class="btn" id="start_btn">START NEW GAME</button>
     </div>
     <script src="assets/css/js/game.js"></script>
 </body>

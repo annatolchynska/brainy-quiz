@@ -100,6 +100,42 @@ const questions = [{
         answer: 1
 
     },
+    {
+        question: "What is the only fish that can blink with both eyes?",
+        choice1:'dolphin',
+        choice2: 'shark', 
+        choice3:'whale',
+        choice4:'salmon',
+        answer: 2
+
+    },
+    {
+        question: "What's the average time for a person to fall asleep?",
+        choice1:'1 hour',
+        choice2: '30 minutes', 
+        choice3:'7 minutes',
+        choice4:'17 minutes',
+        answer: 3
+
+    },
+    {
+        question: "What do people actually see while looking at a bright sky and seeing white dots?",
+        choice1:'dust',
+        choice2: 'snow', 
+        choice3:'white blood cells in their body',
+        choice4:'brain cells',
+        answer: 3
+
+    },
+    {
+        question: "Which animal have rectangular pupil in their eye?",
+        choice1:'elephant',
+        choice2: 'goat', 
+        choice3:'koala',
+        choice4:'penguin',
+        answer: 2
+
+    },
 ];
 
 /* functions for buttons to show different divs (game-sections)*/
@@ -139,20 +175,8 @@ function myFunction1() {
     }
 }
 
-function myFunction2() {
-    if (scoreDiv.style.display === "block") {
-        scoreDiv.style.display = "none";
-    } else {
-        scoreDiv.style.display = "block";
-    }
-    if (scoreDiv.style.display === "none") {
-        quiz.style.display = "block"
-    } else {
-        quiz.style.display = "none;"
-    }
-}
 
-function myFunction3() {
+function myFunction2() {
     if (scoreDiv.style.display === "block") {
         scoreDiv.style.display = "none";
     } else {

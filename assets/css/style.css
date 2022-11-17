@@ -52,6 +52,14 @@ h4 {
     padding-bottom: 15px;
 
 }
+#rules {
+ color: #f4447d;
+ text-shadow: 1px 1px white;
+ font-size: 30px;
+ margin-left: 15px;
+ margin-right: 15px;
+ 
+}
 
 #username {
     font-size: 30px;
@@ -187,29 +195,20 @@ h4 {
     font-size: 30px;
     margin: 20px;
     text-align: center;
+    text-shadow: 2px 2px 2px white;
 }
 #score {
     text-align: center;
 }
-#back_btn {
+
+#IQ {
     font-size: 30px;
-    margin-right: 15px;
-    box-shadow: 0 0 15px 15px #bb44f4;
-    color: #f4447d;
-    text-shadow: 2px 2px #bb44f4;
-    margin-top: 30px;
-    border-radius: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 2px solid #bb44f4;
-   
-}
-
-#back_btn:hover {
-    box-shadow: none;
-    border-style: none;
+    text-align: center;
+    color: #bb44f4;
+    text-shadow: 1px 1px white;
 
 }
+
 
 #start_btn {
     font-size: 30px;
@@ -320,13 +319,7 @@ h4 {
 #next {
     margin-left: 15px;
 }
-    #back_btn {
-        font-size: 20px;
-        margin-left: 15px;
-        margin-right: 15px;
-        text-shadow: none;
-    }
-
+    
     #start_btn {
         font-size: 20px;
         margin-left: 15px;
