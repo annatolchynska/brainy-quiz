@@ -274,11 +274,6 @@ function timer() {
     let timer = setInterval(function() {
         document.getElementById('timer').innerHTML = seconds;
         seconds--;
-
-        if (seconds < 0) {
-            localStorage.setItem("mostRecentScore", score);
-            clearInterval(timer);
-            location.href = "index.html";}
         
     }, 1000);} 
 
