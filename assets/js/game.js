@@ -138,6 +138,7 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score-number');
 const progressBarFull = document.getElementById('progressBarFull');
+let seconds = 60;
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -151,13 +152,13 @@ let input = document.getElementById('username');
 let button = document.getElementById('go');
 /*functions */
 /*enables go button only if Username is entered*/
-button.disabled = true; 
 
-input.addEventListener("change", stateHandle);
+
+input.addEventListener("change", username);
 
 function stateHandle() {
     if (document.getElementById("username").value === "") {
-        button.disabled = true; 
+         
     } else {
         button.disabled = false; 
     }
@@ -248,13 +249,15 @@ choices.forEach(choice => {
 let incrementScore = num => {
     score += num
     scoreText.innerText = score
+    
+
 }
 
 startGame()
 
 /* timer function */
 function timer() {
-    let seconds = 60;
+    
     let timer = setInterval (() => {
         document.getElementById('timer').innerHTML = seconds;
         seconds--;
