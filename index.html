@@ -25,15 +25,15 @@
         <p id="rules">You have 60 seconds to answer 10 random questions. Choose one answer for each question and see if
             your IQ is equal to Einstein's :-) </p>
         <form class="user-name">
-            <h4 id="user-name">create your username below to start the game</h4>
+            <h4 id="user-name"> create your username below to start the game </h4>
             <input type="text" id="username" placeholder="Username">
         </form>
 
         <h4> READY..STEADY..</h4>
-        <button onclick="showQuiz()" type="button" class="btn" id="go"> GO! </button>
+        <button type="button" onclick = "showQuiz()" class="btn" id="go"> GO! </button>
 
     </div>
-    </div>
+
 
     <!--second displaying div-->
     <div class="display" id="quiz">
@@ -41,6 +41,7 @@
             <p id="progressText">
                 Question
             </p>
+
             <div id="progressBar">
                 <div id="progressBarFull"></div>
             </div>
@@ -50,9 +51,7 @@
             <p id="current-score"> SCORE <span> &#128396 </span>
                 <span class="main-text" id="score-number">0</span>
             </p>
-
         </div>
-
         <div id="questions">
             <h1 id="question"> Insert your question here</h1>
         </div>
@@ -71,20 +70,21 @@
         <div>
             <p id="timer"> </p>
         </div>
-        <!--third displaying div-->
-        <div class="display" id="score">
-            <h1 id="einstein">Let's see how BRAINY you are! <span> &#129504</span> </h1>
-            <ul id="IQ">
-                <li>7-10: Einstein level</li>
-                <li>5-7: Your random neighbor level</li>
-                <li>1-5: Homer Simpson level</li>
-            </ul>
-            <p id="number">TOTAL SCORE</p>
+    </div>
+    <!--third displaying div-->
+    <div class="display" id="score">
+        <h1 id="einstein">Let's see how BRAINY you are! <span> &#129504</span> </h1>
+        <ul id="IQ">
+            <li>7-10: Einstein level</li>
+            <li>5-7: Your random neighbor level</li>
+            <li>1-5: Homer Simpson level</li>
+        </ul>
+        <p id="number">TOTAL SCORE</p>
 
 
-            <button onclick="goHome()" class="btn" id="start_btn">START NEW GAME</button>
-        </div>
-        <script src="assets/js/game.js"></script>
+        <button onclick="goHome()" class="btn" id="start_btn">START NEW GAME</button>
+    </div>
+    <script src="assets/js/game.js"></script>
 </body>
 
 </html>

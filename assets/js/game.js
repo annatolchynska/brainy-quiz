@@ -128,11 +128,11 @@ const questions = [{
         answer: 2
     },
 ];
-/* functions for buttons to show different divs (game-sections)*/
+
 const welcome = document.getElementById("welcome")
 const quiz = document.getElementById('quiz')
 const scoreDiv = document.getElementById('score')
-
+const username = document.getElementById ('username')
 const question = document.getElementById('question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.getElementById('progressText');
@@ -158,10 +158,8 @@ input.addEventListener("change", username);
 
 function stateHandle() {
     if (document.getElementById("username").value === "") {
-         
-    } else {
-        button.disabled = false; 
-    }
+        alert ("please enter the username!")
+    } 
 }
 
 function showQuiz() {
@@ -199,7 +197,7 @@ function goHome() {
 let getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         
-         return scoreDiv.style.display = "block"
+         return scoreDiv.classList.add("mystyle")
          
     }
     questionCounter++
