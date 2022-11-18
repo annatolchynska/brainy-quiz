@@ -130,7 +130,7 @@ const quiz = document.getElementById('quiz')
 const scoreDiv = document.getElementById('score')
 
 
-function myFunction() {
+function showQuiz() {
     if (welcome.style.display === "block") {
         welcome.style.display = "none";
     } else {
@@ -142,7 +142,7 @@ function myFunction() {
         quiz.style.display = "none";
     }
 }
-function myFunction1() {
+function showScore() {
     if (quiz.style.display === "block") {
         quiz.style.display = "none";
     } else {
@@ -155,7 +155,7 @@ function myFunction1() {
     }
 }
 
-function myFunction2() {
+function goHome() {
     if (scoreDiv.style.display === "block") {
         scoreDiv.style.display = "none";
     } else {
@@ -191,7 +191,7 @@ input.addEventListener("change", stateHandle);
 
 function stateHandle() {
     if (document.getElementById("username").value === "") {
-        button.disabled = true; alert ('Please enter username!')
+        button.disabled = true; 
     } else {
         button.disabled = false; 
     }
@@ -206,9 +206,9 @@ function stateHandle() {
 }
 let getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
-
-        return window.location.assign('index.html')
+        
+         return scoreDiv.style.display = "block"
+         
     }
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
@@ -261,6 +261,7 @@ let incrementScore = num => {
 
 startGame()
 
+/* timer function */
 function timer() {
     let seconds = 60;
     let timer = setInterval (() => {

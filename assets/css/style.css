@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: Mali;
-    background: url("./image/puzzle.webp") no-repeat center center fixed;
+    background: url("/assets/images/puzzle.webp") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -52,21 +52,23 @@ h4 {
     padding-bottom: 15px;
 
 }
+
 #rules {
- color: #f4447d;
- text-shadow: 1px 1px white;
- font-size: 30px;
- margin-left: 15px;
- margin-right: 15px;
- 
+    color: #f4447d;
+    text-shadow: 1px 1px white;
+    font-size: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+
 }
-#user-name 
-{
+
+#user-name {
     color: #44f4bb;
     text-shadow: 2px 2px gray;
     font-size: 30px;
     margin-top: 10px;
 }
+
 #username {
     font-size: 30px;
     text-decoration: none;
@@ -100,11 +102,11 @@ h4 {
     display: none;
 }
 
-#timer
-{
+#timer {
     font-size: 25px;
     color: #bb44f4;
 }
+
 #progressText {
     font-size: 20px;
     text-shadow: 5px 5px 8px #023020;
@@ -113,25 +115,27 @@ h4 {
     float: left;
 
 }
+
 #progressBar {
-    margin:20px;
+    margin: 20px;
 }
+
 #current-score {
     font-size: 30px;
     padding: 20px;
     text-shadow: 5px 5px 8px #f4447d;
     color: #bb44f4;
- 
-  
+
 }
 
 #score-number {
-    padding:15px;
+    padding: 15px;
     text-shadow: 2px 2px gray;
     color: #44f4bb;
     font-size: 30px;
     margin-top: 15px;
     margin-bottom: 15px;
+    margin-left: 30px;
 }
 
 /* question section */
@@ -164,33 +168,16 @@ h4 {
 
 .choice-text:hover {
     cursor: pointer;
-    border: 2px solid white;
     box-shadow: none;
 
 }
 
-
-
-/* submit button */
-#next {
-    font-size: 30px;
-    margin-bottom: 30px;
-    margin-top: 40px;
-    margin-left: 45%;
-    box-shadow: 0 0 15px 15px #44f4bb;
-    border-radius: 40px;
-    color: #f4447d;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 2px solid #44f4bb;
+#timer {
     text-align: center;
-}
+    font-size: 60px;
+    text-shadow: 5px 5px 5px #f4447d;
 
-#next:hover {
-    border-style: none;
-    box-shadow: none;
 }
-
 /* score div */
 #score {
     display: none;
@@ -203,6 +190,7 @@ h4 {
     text-align: center;
     text-shadow: 2px 2px 2px white;
 }
+
 #score {
     text-align: center;
 }
@@ -227,7 +215,7 @@ h4 {
     padding-left: 20px;
     padding-right: 20px;
     border: 2px solid #f4447d;
-  
+
 }
 
 #start_btn:hover {
@@ -251,9 +239,11 @@ h4 {
 
         font-size: 30px;
     }
-#next {
-    margin-left: 20px;
-}
+
+    #next {
+        margin-left: 20px;
+    }
+
     .choice-text {
         font-size: 25px;
         margin-left: 20px;
@@ -275,8 +265,10 @@ h4 {
             font-size: 30px;
         }
     }
-
-   }
+    #timer {
+        font-size: 30px;
+    }
+}
 
 /* for sreens size from 400px and down */
 @media screen and (max-width: 400px) {
@@ -322,10 +314,10 @@ h4 {
         width: 70%;
     }
 
-#next {
-    margin-left: 15px;
-}
-    
+    #timer {
+        font-size: 30px;
+    }
+
     #start_btn {
         font-size: 20px;
         margin-left: 15px;
