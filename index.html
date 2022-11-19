@@ -24,11 +24,11 @@
         <h4 id="user-name"> create your username below to start the game </h4>
         <form class="user-name">
             <label for="username"></label>
-            <input type="text" onclick="stateHandle()" name="username" id="username" placeholder="Username">
+            <input type="text" name="username" id="username" placeholder="Username">
         </form>
 
         <h4> READY..STEADY..</h4>
-        <button type="button" onclick="showQuiz()" class="btn" id="go"> GO! </button>
+        <button type="button" class="btn" id="go"> GO! </button>
 
     </div>
 
@@ -45,8 +45,8 @@
         <div class="score-item">
             <p id="current-score"> SCORE <span> &#128396; </span>
             </p>
-                <div class="main-text" id="score-number">0</div>
-            
+            <div class="main-text" id="score-number">0</div>
+
         </div>
         <div id="questions">
             <h1 id="question"> Insert your question here</h1>
@@ -77,7 +77,7 @@
             <li>1-5: Homer Simpson level</li>
         </ul>
 
-        <button onclick="goHome()" class="btn" id="start_btn">START NEW GAME</button>
+        <button class="btn" id="start_btn">START NEW GAME</button>
     </div>
     <script src="assets/js/game.js"></script>
 </body>

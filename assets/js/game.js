@@ -129,42 +129,27 @@ const questions = [{
     },
 ];
 //global variables 
-const welcome = document.getElementById("welcome")
-const quiz = document.getElementById('quiz')
-const scoreDiv = document.getElementById('score')
-const username = document.getElementById('username')
+const welcome = document.getElementById("welcome");
+const quiz = document.getElementById('quiz');
+const scoreDiv = document.getElementById('score');
 const question = document.getElementById('question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score-number');
-const totalText = document.getElementById('number')
+const totalText = document.getElementById('number');
 const progressBarFull = document.getElementById('progressBarFull');
-let seconds = 60;
-let currentQuestion = {}
-let acceptingAnswers = true
-let questionCounter = 0
-let availableQuestions = []
-const SCORE_POINTS = 1
-const MAX_QUESTIONS = 10
-let input = document.getElementById('username');
-let button = document.getElementById('go');
+let currentQuestion = {};
+let acceptingAnswers = true;
+let questionCounter = 0;
+let availableQuestions = [];
+const SCORE_POINTS = 1;
+const MAX_QUESTIONS = 10;
+let score;
+
 //functions 
 
-//function to put the username
-input.addEventListener("change", username);
-button.addEventListener('click', (e) => {
-    stateHandle();
-
-})
-stateHandle = () => {
-    if (username.value === "") {
-button.style.display = "none"
-    } else {
-        button.style.display = "block"
-    }
-}
 //functions to show/hide divs
-showQuiz = () => {
+document.getElementById('go').addEventListener('click', function showQuiz() {
     if (welcome.style.display === "block") {
         welcome.style.display = "none";
     } else {
@@ -172,78 +157,79 @@ showQuiz = () => {
     }
     if (welcome.style.display === "none") {
         quiz.style.display = "block";
-        startGame()
+        startGame();
     } else {
         quiz.style.display = "none";
     }
-}
-goHome = () => {
+});
+document.getElementById('start_btn').addEventListener('click', function goHome() {
     if (scoreDiv.style.display === "block") {
         scoreDiv.style.display = "none";
     } else {
         scoreDiv.style.display = "block";
     }
     if (scoreDiv.style.display === "none") {
-        welcome.style.display = "block"
+        welcome.style.display = "block";
     } else {
-        welcome.style.display = "none;"
+        welcome.style.display = "none;";
     }
-}
+});
 //function to run the game
-startGame = () => {
-    questionCounter = 0
-    score = 0
-    availableQuestions = [...questions]
-    getNewQuestion()
-}
+let startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestion();
+};
 //function to get questions
-getNewQuestion = () => {
+let getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
-        scoreDiv.style.display = "block", quiz.style.display = 'none'
-    }
-    questionCounter++
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+        progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
 
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionsIndex]
-    question.innerText = currentQuestion.question
+        return scoreDiv.style.display = "block", quiz.style.display = 'none';
+    }
+    questionCounter++;
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionsIndex];
+    question.innerText = currentQuestion.question;
 
     choices.forEach(choice => {
-        const number = choice.dataset.number
-        choice.innerText = currentQuestion['choice' + number]
-    })
-    availableQuestions.splice(questionsIndex, 1)
-    acceptingAnswers = true
-}
+        const number = choice.dataset.number;
+        choice.innerText = currentQuestion['choice' + number];
+    });
+    availableQuestions.splice(questionsIndex, 1);
+    acceptingAnswers = true;
+};
 //function to get options for answer and get the right answer
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if (!acceptingAnswers) return
+        if (!acceptingAnswers) return;
 
-        acceptingAnswers = false
-        const selectedChoice = e.target
-        const selectedAnswer = selectedChoice.dataset.number
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset.number;
 
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-        const correctAnswer = choices[currentQuestion.answer - 1]
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        const correctAnswer = choices[currentQuestion.answer - 1];
         if (classToApply === 'correct') {
-            incrementScore(SCORE_POINTS)
+            incrementScore(SCORE_POINTS);
         } else if (classToApply === 'incorrect') {
-            correctAnswer.parentElement.classList.add('correct')
+            correctAnswer.parentElement.classList.add('correct');
         }
-        selectedChoice.parentElement.classList.add(classToApply)
+        selectedChoice.parentElement.classList.add(classToApply);
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply)
-            correctAnswer.parentElement.classList.remove('correct')
-            getNewQuestion()
-        }, 10)
-    })
-})
+            selectedChoice.parentElement.classList.remove(classToApply);
+            correctAnswer.parentElement.classList.remove('correct');
+            getNewQuestion();
+        }, 10);
+    });
+});
 //function to count scores
-incrementScore = num => {
-    score += num
-    scoreText.innerText = score
-    totalText.innerText = score
-}
-startGame()
+let incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+    totalText.innerText = score;
+};
+startGame();
