@@ -53,6 +53,16 @@ h4 {
 
 }
 
+.nerd {
+animation-name: rotate;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    100% {transform: rotate(360deg);}
+}
+
 #rules {
     color: #f4447d;
     text-shadow: 1px 1px white;
@@ -100,17 +110,12 @@ h4 {
     display: none;
 }
 
-#timer {
-    font-size: 25px;
-    color: #bb44f4;
-}
-
 #progressText {
     font-size: 20px;
     text-shadow: 5px 5px 8px #023020;
     color: #44f4bb;
     padding: 15px;
-    float: left;
+    text-align: center;
 }
 
 #progressBar {
@@ -119,7 +124,6 @@ h4 {
 
 #current-score {
     font-size: 30px;
-    padding: 40px;
     text-shadow: 5px 5px 8px #f4447d;
     color: #bb44f4;
     text-align: center;
@@ -127,7 +131,6 @@ h4 {
 }
 
 #score-number {
-    padding: 15px;
     text-shadow: 2px 2px gray;
     color: #44f4bb;
     font-size: 30px;
@@ -166,7 +169,7 @@ h4 {
 .choice-text:active {
 
     box-shadow: none;
-
+    
 }
 
 /* score div */
@@ -297,12 +300,12 @@ h4 {
     }
 
     #score-number {
-        text-align: left;
+
         font-size: 30px;
     }
 
     #current-score {
-        text-align: left;
+
         margin-top: 20px;
     }
 
