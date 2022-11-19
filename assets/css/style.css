@@ -80,7 +80,7 @@ h4 {
 }
 
 #go {
-   
+
     color: #f4447d;
     box-shadow: 0 0 10px 10px #44f4bb;
     font-size: 40px;
@@ -90,7 +90,7 @@ h4 {
     border: 2px solid #44f4bb;
 }
 
-#go:hover {
+#go:active {
     border-style: none;
     box-shadow: none;
 }
@@ -132,7 +132,7 @@ h4 {
     color: #44f4bb;
     font-size: 30px;
     text-align: center;
-   
+
 }
 
 /* question section */
@@ -163,8 +163,8 @@ h4 {
 
 }
 
-.choice-text:hover {
-    cursor: pointer;
+.choice-text:active {
+
     box-shadow: none;
 
 }
@@ -212,7 +212,7 @@ h4 {
 
 }
 
-#start_btn:hover {
+#start_btn:active {
     box-shadow: none;
     border-style: none;
 
@@ -295,14 +295,17 @@ h4 {
         margin-left: 15px;
         margin-right: 15px;
     }
-#score-number {
-    text-align: left;
-    font-size: 30px;
-}
-#current-score {
-    text-align: left;
-    margin-top: 20px;
-}
+
+    #score-number {
+        text-align: left;
+        font-size: 30px;
+    }
+
+    #current-score {
+        text-align: left;
+        margin-top: 20px;
+    }
+
     .choice-text {
         font-size: 20px;
         margin-left: 20px;
