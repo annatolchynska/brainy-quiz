@@ -69,7 +69,7 @@ h4 {
     margin-top: 10px;
 }
 
-#username {
+#name {
     font-size: 30px;
     text-decoration: none;
     color: #f4447d;
@@ -95,8 +95,6 @@ h4 {
     box-shadow: none;
 }
 
-
-
 /* quiz-game div*/
 #quiz {
     display: none;
@@ -113,7 +111,6 @@ h4 {
     color: #44f4bb;
     padding: 15px;
     float: left;
-
 }
 
 #progressBar {
@@ -179,6 +176,7 @@ h4 {
     text-shadow: 5px 5px 5px #f4447d;
 
 }
+
 /* score div */
 #score {
     display: none;
@@ -203,6 +201,7 @@ h4 {
     text-shadow: 1px 1px white;
 
 }
+
 #number {
     font-size: 60px;
 }
@@ -268,6 +267,7 @@ h4 {
             font-size: 30px;
         }
     }
+
     #timer {
         font-size: 30px;
     }

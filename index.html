@@ -22,18 +22,18 @@
         <h1> WELCOME TO QUIZ GAME </h1>
         <h2><span>&#129299</span> BRAINY <span>&#129299</span></h2>
         <h3>RULES:</h3>
-        <p id="rules">You have 60 seconds to answer 10 random questions. Choose one answer for each question and see if
+        <p id="rules">In this quiz you have to answer 10 random questions. Choose one answer for each question and see if
             your IQ is equal to Einstein's :-) </p>
+        <h4 id="user-name"> create your username below to start the game </h4>
         <form class="user-name">
-            <h4 id="user-name"> create your username below to start the game </h4>
-            <input type="text" id="username" placeholder="Username">
+            <label for="name"></label>
+            <input type="text" onclick="stateHandle()" name="name" id="name" placeholder="Username">
         </form>
 
         <h4> READY..STEADY..</h4>
-        <button type="button" onclick = "showQuiz()" class="btn" id="go"> GO! </button>
+        <button type="button" onclick="showQuiz()" class="btn" id="go"> GO! </button>
 
     </div>
-
 
     <!--second displaying div-->
     <div class="display" id="quiz">
@@ -80,8 +80,6 @@
             <li>5-7: Your random neighbor level</li>
             <li>1-5: Homer Simpson level</li>
         </ul>
-       
-
 
         <button onclick="goHome()" class="btn" id="start_btn">START NEW GAME</button>
     </div>
