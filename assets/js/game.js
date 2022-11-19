@@ -1,4 +1,4 @@
-/* questions-answers*/
+//questions-answers
 const questions = [{
         question: 'What part of human body cannot heal itself?',
         choice1: 'Skin',
@@ -128,7 +128,7 @@ const questions = [{
         answer: 2
     },
 ];
-/* variables */
+//global variables 
 const welcome = document.getElementById("welcome")
 const quiz = document.getElementById('quiz')
 const scoreDiv = document.getElementById('score')
@@ -148,18 +148,19 @@ const SCORE_POINTS = 1
 const MAX_QUESTIONS = 10
 let input = document.getElementById('name');
 let button = document.getElementById('go');
-/*functions */
-/*function to put the username*/
+//functions 
+
+//function to put the username
 input.addEventListener("change", username);
 button.addEventListener('click', (e)=>{
     stateHandle();
-    console.log('go', e)
+    
 })
 stateHandle = () => {
     if (username.value === "") {
         } else showQuiz()
 }
-/* functions to show/hide divs*/
+//functions to show/hide divs
 showQuiz = () => {
     if (welcome.style.display === "block") {
         welcome.style.display = "none";
@@ -185,14 +186,14 @@ goHome = () => {
         welcome.style.display = "none;"
     }
 }
-/*function to run the game*/
+//function to run the game
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
 }
-/*function to get questions*/
+//function to get questions
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
@@ -212,7 +213,7 @@ getNewQuestion = () => {
     availableQuestions.splice(questionsIndex, 1)
     acceptingAnswers = true
 }
-/*function to get options for answer and get the right answer*/
+//function to get options for answer and get the right answer
 choices.forEach (choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
@@ -236,7 +237,7 @@ choices.forEach (choice => {
         }, 10)
     })
 })
-/*function to count scores*/
+//function to count scores
 incrementScore = num => {
     score += num
     scoreText.innerText = score

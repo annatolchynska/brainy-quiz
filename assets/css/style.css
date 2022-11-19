@@ -115,15 +115,15 @@ h4 {
 
 #progressBar {
     margin: 20px;
-    width: 100%;
 }
 
 #current-score {
     font-size: 30px;
-    padding: 20px;
+    padding: 40px;
     text-shadow: 5px 5px 8px #f4447d;
     color: #bb44f4;
-
+    text-align: center;
+    margin-top: 20px;
 }
 
 #score-number {
@@ -131,9 +131,8 @@ h4 {
     text-shadow: 2px 2px gray;
     color: #44f4bb;
     font-size: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 30px;
+    text-align: center;
+   
 }
 
 /* question section */
@@ -167,13 +166,6 @@ h4 {
 .choice-text:hover {
     cursor: pointer;
     box-shadow: none;
-
-}
-
-#timer {
-    text-align: center;
-    font-size: 60px;
-    text-shadow: 5px 5px 5px #f4447d;
 
 }
 
@@ -267,10 +259,6 @@ h4 {
             font-size: 30px;
         }
     }
-
-    #timer {
-        font-size: 30px;
-    }
 }
 
 /* for sreens size from 400px and down */
@@ -308,17 +296,20 @@ h4 {
         margin-left: 15px;
         margin-right: 15px;
     }
-
+#score-number {
+    text-align: left;
+    font-size: 30px;
+}
+#current-score {
+    text-align: left;
+    margin-top: 20px;
+}
     .choice-text {
         font-size: 20px;
         margin-left: 20px;
         margin-right: 50px;
         float: left;
         width: 70%;
-    }
-
-    #timer {
-        font-size: 30px;
     }
 
     #start_btn {
