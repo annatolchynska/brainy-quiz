@@ -118,6 +118,7 @@ h4 {
 
 #progressBar {
     margin: 20px;
+    width: 100%;
 }
 
 #current-score {
@@ -202,7 +203,9 @@ h4 {
     text-shadow: 1px 1px white;
 
 }
-
+#number {
+    font-size: 60px;
+}
 
 #start_btn {
     font-size: 30px;

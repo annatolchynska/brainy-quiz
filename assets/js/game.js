@@ -128,7 +128,6 @@ const questions = [{
         answer: 2
     },
 ];
-
 const welcome = document.getElementById("welcome")
 const quiz = document.getElementById('quiz')
 const scoreDiv = document.getElementById('score')
@@ -137,6 +136,7 @@ const question = document.getElementById('question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score-number');
+const totalText = document.getElementById ('number')
 const progressBarFull = document.getElementById('progressBarFull');
 let seconds = 60;
 
@@ -151,15 +151,13 @@ const MAX_QUESTIONS = 10
 let input = document.getElementById('username');
 let button = document.getElementById('go');
 /*functions */
-/*enables go button only if Username is entered*/
-
 
 input.addEventListener("change", username);
 
 function stateHandle() {
     if (document.getElementById("username").value === "") {
         alert ("please enter the username!")
-    } 
+    } else showQuiz() 
 }
 
 function showQuiz() {
@@ -196,14 +194,12 @@ function goHome() {
 }
 let getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        
-         return scoreDiv.classList.add("mystyle")
-         
+        progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+        scoreDiv.style.display = "block", quiz.style.display = 'none'         
     }
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
-
+  
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
@@ -247,18 +243,19 @@ choices.forEach(choice => {
 let incrementScore = num => {
     score += num
     scoreText.innerText = score
-    
-
+    totalText.innerText = score
 }
 
 startGame()
 
 /* timer function */
+
+
 function timer() {
     
     let timer = setInterval (() => {
         document.getElementById('timer').innerHTML = seconds;
         seconds--;
         
-    }, 1000);
-}
+    }, 1000);}
+    
