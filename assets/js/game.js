@@ -157,7 +157,11 @@ button.addEventListener('click', (e) => {
 
 })
 stateHandle = () => {
-    if (username.value === "") {} else showQuiz()
+    if (username.value === "") {
+button.style.display = "none"
+    } else {
+        button.style.display = "block"
+    }
 }
 //functions to show/hide divs
 showQuiz = () => {

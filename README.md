@@ -76,3 +76,4 @@ The website is simple without any distractive images, which gives user the abili
 * The score-section shows how many right answers were given out of ten and provides feedback of knowledge level of the user in funny way.
 <img src ="./assets/images/score-section.png" alt = "the screenshot of score-section">
 
+
