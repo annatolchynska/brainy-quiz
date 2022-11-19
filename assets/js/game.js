@@ -132,7 +132,7 @@ const questions = [{
 const welcome = document.getElementById("welcome")
 const quiz = document.getElementById('quiz')
 const scoreDiv = document.getElementById('score')
-const username = document.getElementById('name')
+const username = document.getElementById('username')
 const question = document.getElementById('question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.getElementById('progressText');
@@ -146,19 +146,18 @@ let questionCounter = 0
 let availableQuestions = []
 const SCORE_POINTS = 1
 const MAX_QUESTIONS = 10
-let input = document.getElementById('name');
+let input = document.getElementById('username');
 let button = document.getElementById('go');
 //functions 
 
 //function to put the username
 input.addEventListener("change", username);
-button.addEventListener('click', (e)=>{
+button.addEventListener('click', (e) => {
     stateHandle();
-    
+
 })
 stateHandle = () => {
-    if (username.value === "") {
-        } else showQuiz()
+    if (username.value === "") {} else showQuiz()
 }
 //functions to show/hide divs
 showQuiz = () => {
@@ -214,7 +213,7 @@ getNewQuestion = () => {
     acceptingAnswers = true
 }
 //function to get options for answer and get the right answer
-choices.forEach (choice => {
+choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
 
