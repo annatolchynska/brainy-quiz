@@ -1,18 +1,18 @@
 //questions-answers
 const questions = [{
         question: 'What part of human body cannot heal itself?',
-        choice1: 'Skin',
-        choice2: 'Liver',
-        choice3: 'Teeth',
-        choice4: 'Bones',
+        choice1: 'skin',
+        choice2: 'liver',
+        choice3: 'teeth',
+        choice4: 'bones',
         answer: 3
     },
     {
         question: "It's illegal to own just one species of this animal in Switzerland.",
-        choice1: 'Dog',
-        choice2: 'Parrot',
-        choice3: 'Lizzard',
-        choice4: 'Guinea pig',
+        choice1: 'dog',
+        choice2: 'parrot',
+        choice3: 'lizzard',
+        choice4: 'guinea pig',
         answer: 4,
     },
     {
@@ -33,18 +33,18 @@ const questions = [{
     },
     {
         question: "The largest organ of human body is...",
-        choice1: 'Skin',
-        choice2: 'Tongue',
-        choice3: 'Lungs',
-        choice4: 'Intestines',
+        choice1: 'skin',
+        choice2: 'tongue',
+        choice3: 'lungs',
+        choice4: 'intestines',
         answer: 1
     },
     {
         question: "What animal's eye is bigger than its brain?",
-        choice1: 'Sloth',
-        choice2: 'Ostrich',
-        choice3: 'Whale',
-        choice4: 'Schrimp',
+        choice1: 'sloth',
+        choice2: 'ostrich',
+        choice3: 'whale',
+        choice4: 'schrimp',
         answer: 2
     },
     {
@@ -57,34 +57,34 @@ const questions = [{
     },
     {
         question: "What is the only flying mammal?",
-        choice1: 'Ostrich',
-        choice2: 'Bat',
-        choice3: 'Chicken',
-        choice4: 'Flying squirrells',
+        choice1: 'ostrich',
+        choice2: 'bat',
+        choice3: 'chicken',
+        choice4: 'flying squirrells',
         answer: 2
     },
     {
         question: "What mammal doesn't have a stomach?",
-        choice1: 'Whale',
-        choice2: 'Platypus',
-        choice3: 'Wombat',
-        choice4: 'Armadillo',
+        choice1: 'whale',
+        choice2: 'platypus',
+        choice3: 'wombat',
+        choice4: 'armadillo',
         answer: 2
     },
     {
         question: "What is the deadliest animal in the world?",
-        choice1: 'Crocodile',
-        choice2: 'Shark',
-        choice3: 'Mosquito',
-        choice4: 'Cobra',
+        choice1: 'crocodile',
+        choice2: 'shark',
+        choice3: 'mosquito',
+        choice4: 'cobra',
         answer: 3
     },
     {
         question: "What is the tallest building in the world?",
-        choice1: 'The Burg Khalifa in Dubai',
-        choice2: 'The Empire State Building in New York ',
-        choice3: 'The Shanghai Tower in Shanghai',
-        choice4: 'The One World Trade Center in New York',
+        choice1: 'the Burg Khalifa in Dubai',
+        choice2: 'the Empire State Building in New York ',
+        choice3: 'the Shanghai Tower in Shanghai',
+        choice4: 'the One World Trade Center in New York',
         answer: 1
     },
     {
@@ -125,6 +125,14 @@ const questions = [{
         choice2: 'goat',
         choice3: 'koala',
         choice4: 'penguin',
+        answer: 2
+    },
+    {
+        question: "What is the most visied country in the world due to the recent research?",
+        choice1: 'the USA',
+        choice2: 'France',
+        choice3: 'Thailand',
+        choice4: 'Italy',
         answer: 2
     },
 ];
