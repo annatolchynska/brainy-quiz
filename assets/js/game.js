@@ -120,7 +120,7 @@ const questions = [{
         answer: 3
     },
     {
-        question: "Which animal have rectangular pupil in their eye?",
+        question: "Which animal has rectangular pupils in their eye?",
         choice1: 'elephant',
         choice2: 'goat',
         choice3: 'koala',
@@ -128,7 +128,7 @@ const questions = [{
         answer: 2
     },
     {
-        question: "What is the most visied country in the world due to the recent research?",
+        question: "What is the most visited country in the world due to the recent research?",
         choice1: 'the USA',
         choice2: 'France',
         choice3: 'Thailand',
@@ -147,14 +147,14 @@ const questions = [{
         question: "Which is the only one of the seven wonders of the ancient world still standing?",
         choice1: 'Lighthouse of Alexandria',
         choice2: 'Colossus of Rhodes',
-        choice3: 'The Pyramids of Giza',
+        choice3: 'the Pyramids of Giza',
         choice4: 'Hanging Gardens of Babylon',
         answer: 3
     },
     {
         question: "What do rings on the Olympic flag stand for?",
         choice1: 'people who invented it',
-        choice2: 'kinds of sports that were played first',
+        choice2: 'sports played in the first olympic games',
         choice3: 'Greek Gods',
         choice4: 'continents',
         answer: 4
