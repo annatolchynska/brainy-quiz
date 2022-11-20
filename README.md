@@ -15,10 +15,6 @@ The Live link to website can be found here - [BRAINY QUIZ](https://annatolchynsk
  The information and quiz can be accessed and played on all devices.
 
 ---
-### Fonts
-* 'Mali' is the font used for this website and has been imported from Google fonts.
-
----
 ### UX
 User Stories
 * As a user, I want to:
@@ -70,7 +66,8 @@ The website is simple without any distractive images, which gives user the abili
 
   * Quiz section will have more available questions and a timer set for 60 seconds
   * score section will provide feedback for particular username
-
+  * emojis will be animated 
+  
 ---
 ### Features
  * The welcome section explains the rules of the quiz to the user and provides the ability to create a username and a button to start the quiz.
@@ -83,10 +80,12 @@ The website is simple without any distractive images, which gives user the abili
 
 * The score-section shows how many right answers were given out of ten and provides feedback of knowledge level of the user in funny way.
 <img src ="./assets/images/score-section.png" alt = "the screenshot of score-section">
+
 ### Testing
    * This website works in different browsers: Chrome, Safari, Opera.
    * I made sure that the game is responsive and functions properly on all standart screen sizes by using devtools device toolbar.
    * I made sure that buttons and all set functions are responsive and work properly.
+
    ### Validator testing 
 * HTML 
    
@@ -137,6 +136,6 @@ The Live link can be found here - [BRAINY-QUIZ](https://annatolchynska.github.io
   * The questions for the game were taken from [COSMOPOLITAN random facts](https://www.cosmopolitan.com/uk/worklife/a33367076/fun-facts-random/), [101 Fun Facts](https://parade.com/966564/parade/fun-facts/
 )
   * The code for picking questions, answers and score was taken from Youtube tutorial of Brian Design [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=3469s), some ideas for functions in js file were taken from [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1200s) by Web Dev Simplified, 
-  * Inspiration for some code ideas were taken from [W3schools](https://www.w3schools.com/default.asp), [stackoverflow](https://stackoverflow.com/), [developer.mozilla](https://developer.mozilla.org/en-US/).
+  * Inspiration for some code ideas were taken from [W3schools](https://www.w3schools.com/default.asp), [stackoverflow](https://stackoverflow.com/), [developer.mozilla](https://developer.mozilla.org/en-US/), Slack community.
 * ### Media
   * The background image was taken from [Pexels](https://www.pexels.com/)
