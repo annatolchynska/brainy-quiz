@@ -1,7 +1,11 @@
 #  🤓 Quiz game "BRAINY" 🤓
+---
+The Live link to website can be found here - [BRAINY QUIZ](https://annatolchynska.github.io/brainy-quiz/)
 
+<img src ="./assets/images/responsiveness.png" alt="screenshot of amiresponsive test">
 
 ---
+
  Quiz game Brainy is a Fun Facts based Trivia Quiz site aimed at people who enjoy the world of interesting facts and testing their knowledge as well as learning new things. It consists of 10 multiple choice questions with a Scoreboard, so you can test your IQ and discover new interesting things.
 
 ---
@@ -53,7 +57,9 @@ The logo represents the aim of the website, matches the design idea and the name
 # 🤓
 
 The background image color of the website (#f4bb44) contrasts and complements with three main colors of the site elements. 
+
 <img src ="./assets/images/colorpalette.png" alt = "screenshot of color palette">
+
 <img src ="./assets/images/colorpalette1.png" alt ="screenshot of another colorpalette">
 
 The website is simple without any distractive images, which gives user the ability to concentrate on answering questions and learn new things in an entertaining way. 
@@ -68,12 +74,69 @@ The website is simple without any distractive images, which gives user the abili
 ---
 ### Features
  * The welcome section explains the rules of the quiz to the user and provides the ability to create a username and a button to start the quiz.
+
 <img src ="./assets/images/welcome-section.png" alt ="the screenshot of the landing page">
 
 * The quiz-section contains the info of the current number of question out of 10, the scoreboard, which shows how many right answers were given, question and 4 options of answers.
+
 <img src ="./assets/images/quiz-section.png" alt ="the screenshot of the quiz-section">
 
 * The score-section shows how many right answers were given out of ten and provides feedback of knowledge level of the user in funny way.
 <img src ="./assets/images/score-section.png" alt = "the screenshot of score-section">
+### Testing
+   * This website works in different browsers: Chrome, Safari, Opera.
+   * I made sure that the game is responsive and functions properly on all standart screen sizes by using devtools device toolbar.
+   * I made sure that buttons and all set functions are responsive and work properly.
+   ### Validator testing 
+* HTML 
+   
+   * While testing site by HTML validator no errors were found.
 
+   <img src ="./assets/images/html-validator.png" alt ="screenshot of HTMLvalidator">
 
+* CSS
+  
+   * No errors were found passing through the official (Jigsaw) validator.
+
+   <img src="./assets/images/css-validator.png" alt="screenshot of css validator"> 
+
+* JavaScript
+
+    * While testing through JSHint 70 errors were found: about missing semicolons and errors on the ES6 features. They all were fixed by making sure that setting in "configures" "New JavaScript features (ES6)" is checked.
+
+<img src ="./assets/images/jshint-validator.png" alt ="screenshot of jshint validation">
+
+* Accessibility
+   * I made sure that background and foreground colors have a sufficient contrast ratio and are appealing for user's eye, link text and alt text for images all have discernible names by running it through lighthouse in devtools.
+
+   <img src="./assets/images/lighthouse-test.png" alt="screenshot of lighthouse-test">
+
+   ### Deployment
+* The site was deployed to GitHub pages by following steps:
+   * Git Hub repository choose Settings tab and Pages
+   * From drop down menu source section pick main Branch
+   * once the Save button been clicked the page provided the link to the completed website.
+The Live link can be found here - [BRAINY-QUIZ](https://annatolchynska.github.io/brainy-quiz/)
+
+---
+### Technology used
+ * Languages
+   
+   * [HTML5](https://en.wikipedia.org/wiki/HTML5), [CSS3](https://en.wikipedia.org/wiki/CSS), [JavaScript](https://en.wikipedia.org/wiki/JavaScript) 
+* Software
+  
+  * [Google Fonts](https://fonts.google.com/), [Gitpod](https://gitpod.io/), [Balsamiq](https://balsamiq.com/), [Github](https://github.com/), [Google Developer Tools](https://developer.chrome.com/docs/), [HTML color codes](https://htmlcolorcodes.com/), [Am I Responsive](http://ami.responsivedesign.is/)   
+
+ * Testing
+
+   * [HTML Validation](/assets/img/index-html-validator.png), [CSS Validation](/assets/img/css-validator.png), [JSHint Validation](/assets/img/jshint.png), Lighthouse. 
+
+---
+### Credits
+* ### Content
+  * The questions for the game were taken from [COSMOPOLITAN random facts](https://www.cosmopolitan.com/uk/worklife/a33367076/fun-facts-random/), [101 Fun Facts](https://parade.com/966564/parade/fun-facts/
+)
+  * The code for picking questions, answers and score was taken from Youtube tutorial of Brian Design [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=3469s), some ideas for functions in js file were taken from [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1200s) by Web Dev Simplified, 
+  * Inspiration for some code ideas were taken from [W3schools](https://www.w3schools.com/default.asp), [stackoverflow](https://stackoverflow.com/), [developer.mozilla](https://developer.mozilla.org/en-US/).
+* ### Media
+  * The background image was taken from [Pexels](https://www.pexels.com/)

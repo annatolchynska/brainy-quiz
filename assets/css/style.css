@@ -53,16 +53,6 @@ h4 {
 
 }
 
-.nerd {
-animation-name: rotate;
-animation-duration: 3s;
-animation-iteration-count: infinite;
-}
-
-@keyframes rotate {
-    100% {transform: rotate(360deg);}
-}
-
 #rules {
     color: #f4447d;
     text-shadow: 1px 1px white;
@@ -169,7 +159,7 @@ animation-iteration-count: infinite;
 .choice-text:active {
 
     box-shadow: none;
-    
+
 }
 
 /* score div */
