@@ -62,9 +62,9 @@ The website is simple without any distractive images, which gives user the abili
 
 ### Future features
 
-  * Quiz section will have more available questions and a timer set for 60 seconds;
-  * score section will provide feedback for particular username;
-  * emojis will be animated 
+* Quiz section will have more available questions and a timer set for 60 seconds;
+* Users will have an opportunity to save their results.
+  
   
 ---
 ### Features

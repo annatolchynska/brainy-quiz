@@ -52,36 +52,6 @@ h4 {
     padding-bottom: 15px;
 }
 
-/*emoji animation*/
-#brain {
-    font-size: 70px;
-    animation-name: side-to-side-rotate;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    background-image: none;
-}
-
-@keyframes rotate {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes side-to-side-rotate {
-    0% {
-        transform: translateX(-150px);
-    }
-
-    50% {
-        transform: translateX(150px) rotate(-360deg);
-    }
-
-    100% {
-        transform: translateX(-150px) rotate(360deg);
-    }
-}
-
 #rules {
     color: #f4447d;
     text-shadow: 1px 1px white;
@@ -215,7 +185,37 @@ h4 {
 #number {
     font-size: 60px;
 }
+/*emoji animation*/
+/*this code was taken from Youtube tutorial by Juni Learning*/
+#nerd {
+    font-size: 70px;
+    animation-name: side-to-side-rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: none;
+}
 
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes side-to-side-rotate {
+    0% {
+        transform: translateX(-150px);
+    }
+
+    50% {
+        transform: translateX(150px) rotate(-360deg);
+    }
+
+    100% {
+        transform: translateX(-150px) rotate(360deg);
+    }
+}
+/*The "start new game button*/
 #start_btn {
     font-size: 30px;
     margin-left: 15px;

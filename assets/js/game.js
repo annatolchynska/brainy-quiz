@@ -145,6 +145,7 @@ let availableQuestions = [];
 const SCORE_POINTS = 1;
 const MAX_QUESTIONS = 10;
 let score;
+const username = document.getElementById('username');
 
 //functions 
 //functions to show/hide divs
@@ -182,7 +183,7 @@ let startGame = () => {
 };
 //function to get questions
 /**
- * The code is taken from watching YouTube tutorial 
+ * The code is taken from YouTube tutorial 
  * How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial 
  * by Brian Design
  */
@@ -234,6 +235,6 @@ choices.forEach(choice => {
 let incrementScore = num => {
     score += num;
     scoreText.innerText = score;
-    totalText.innerText = score;
+    totalText.innerText = username.value + '= ' + score;
 };
 startGame();
