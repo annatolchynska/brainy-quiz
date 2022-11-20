@@ -147,7 +147,6 @@ const MAX_QUESTIONS = 10;
 let score;
 
 //functions 
-
 //functions to show/hide divs
 document.getElementById('go').addEventListener('click', function showQuiz() {
     if (welcome.style.display === "block") {
@@ -182,6 +181,11 @@ let startGame = () => {
     getNewQuestion();
 };
 //function to get questions
+/**
+ * The code is taken from watching YouTube tutorial 
+ * How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial 
+ * by Brian Design
+ */
 let getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;

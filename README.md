@@ -110,6 +110,16 @@ The website is simple without any distractive images, which gives user the abili
 
    <img src="./assets/images/lighthouse-test.png" alt="screenshot of lighthouse-test">
 
+   ---
+
+   ###Bugs and Unfixed bugs
+   * On the stage of testing the following error was showing on the console in the Devtools:
+
+   <img src ="./assets/images/error.png" alt="screenshot of error">.
+
+   it was fixed by entering the following code in the head section of the html file: `<link rel="shortcut icon" href="#">`.
+   * No other bugs were found.
+
    ### Deployment
 * The site was deployed to GitHub pages by following steps:
    * Git Hub repository choose Settings tab and Pages
@@ -137,5 +147,4 @@ The Live link can be found here - [BRAINY-QUIZ](https://annatolchynska.github.io
 )
   * The code for picking questions, answers and score was taken from Youtube tutorial of Brian Design [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=3469s), some ideas for functions in js file were taken from [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1200s) by Web Dev Simplified, 
   * Inspiration for some code ideas were taken from [W3schools](https://www.w3schools.com/default.asp), [stackoverflow](https://stackoverflow.com/), [developer.mozilla](https://developer.mozilla.org/en-US/), Slack community.
-* ### Media
   * The background image was taken from [Pexels](https://www.pexels.com/)
