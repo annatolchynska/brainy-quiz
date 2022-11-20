@@ -109,7 +109,6 @@ h4 {
 }
 
 #go {
-
     color: #f4447d;
     box-shadow: 0 0 10px 10px #44f4bb;
     font-size: 40px;
@@ -158,7 +157,6 @@ h4 {
 }
 
 /* question section */
-
 #question {
     text-align: center;
     font-size: 40px;
@@ -186,9 +184,7 @@ h4 {
 }
 
 .choice-text:active {
-
     box-shadow: none;
-
 }
 
 /* score div */
