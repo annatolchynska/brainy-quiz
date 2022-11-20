@@ -135,6 +135,46 @@ const questions = [{
         choice4: 'Italy',
         answer: 2
     },
+    {
+        question: "What former planet was demoted to a dwarf planet in 2006?",
+        choice1: 'Pluto',
+        choice2: 'Uranus',
+        choice3: 'Moon',
+        choice4: 'Nebula',
+        answer: 1
+    },
+    {
+        question: "Which is the only one of the seven wonders of the ancient world still standing?",
+        choice1: 'Lighthouse of Alexandria',
+        choice2: 'Colossus of Rhodes',
+        choice3: 'The Pyramids of Giza',
+        choice4: 'Hanging Gardens of Babylon',
+        answer: 3
+    },
+    {
+        question: "What do rings on the Olympic flag stand for?",
+        choice1: 'people who invented it',
+        choice2: 'kinds of sports that were played first',
+        choice3: 'Greek Gods',
+        choice4: 'continents',
+        answer: 4
+    },
+    {
+        question: "What company does have the slogan 'JUST DO IT'?",
+        choice1: 'Adidas',
+        choice2: 'Nike',
+        choice3: "McDonald's",
+        choice4: 'Apple',
+        answer: 2
+    },
+    {
+        question: "Which of the following countries don't border the Black Sea?",
+        choice1: 'Romania',
+        choice2: 'Moldova',
+        choice3: 'Georgia',
+        choice4: 'Montenegro',
+        answer: 4
+    },
 ];
 //global variables 
 const welcome = document.getElementById("welcome");
