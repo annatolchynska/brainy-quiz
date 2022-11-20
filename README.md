@@ -54,8 +54,6 @@ The background image color of the website (#f4bb44) contrasts and complements wi
 
 <img src ="./assets/images/colorpalette.png" alt = "screenshot of color palette">
 
-<img src ="./assets/images/colorpalette1.png" alt ="screenshot of another colorpalette">
-
 The website is simple without any distractive images, which gives user the ability to concentrate on answering questions and learn new things in an entertaining way. 
 
 ---
@@ -64,8 +62,7 @@ The website is simple without any distractive images, which gives user the abili
 
 * Quiz section will have more available questions and a timer set for 60 seconds;
 * Users will have an opportunity to save their results.
-  
-  
+    
 ---
 ### Features
  * The welcome section explains the rules of the quiz to the user and provides the ability to create a username and a button to start the quiz.
@@ -142,7 +139,7 @@ The Live link can be found here - [BRAINY-QUIZ](https://annatolchynska.github.io
 ### Credits
 * ### Content
   * The questions for the game were taken from [COSMOPOLITAN random facts](https://www.cosmopolitan.com/uk/worklife/a33367076/fun-facts-random/), [101 Fun Facts](https://parade.com/966564/parade/fun-facts/
-)
+), 
   * The code for picking questions, answers and score was taken from Youtube tutorial of Brian Design [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=3469s), some ideas for functions in js file were taken from [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1200s) by Web Dev Simplified, animation for emojis was taken from [How to Animate a Spinning Emoji with HTML & CSS | Basic Web Development Animation Tutorial](https://www.youtube.com/watch?v=tjGrSrCn_1U&t=513s) by Juni Learning.
   * Inspiration for some code ideas were taken from [W3schools](https://www.w3schools.com/default.asp), [stackoverflow](https://stackoverflow.com/), [developer.mozilla](https://developer.mozilla.org/en-US/), Slack community.
   * Emojis were copied from [Emoji terra](https://emojiterra.com/).
