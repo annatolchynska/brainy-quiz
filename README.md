@@ -8,8 +8,6 @@ The Live link to website can be found here - [BRAINY QUIZ](https://annatolchynsk
 
  Quiz game Brainy is a Fun Facts based Trivia Quiz site aimed at people who enjoy the world of interesting facts and testing their knowledge as well as learning new things. It consists of 10 multiple choice questions with a Scoreboard, so you can test your IQ and discover new interesting things.
 
----
-
  The main purpose for creating this trivia is to provide users with an entertaining place to test their knowledge and discover new FunFacts.
 
  The information and quiz can be accessed and played on all devices.
@@ -18,27 +16,27 @@ The Live link to website can be found here - [BRAINY QUIZ](https://annatolchynsk
 ### UX
 User Stories
 * As a user, I want to:
-  * be able to navigate the website easily.
-  * understand the rules of the quiz before starting the game.
-  * know how many questions there will be.
+  * be able to navigate the website easily;
+  * understand the rules of the quiz before starting the game;
+  * know how many questions there will be;
   * know my score during and after playing the quiz.
 
 * As a site owner, I want:
-  * the quiz to be easy and informative.
-  * the questions to be short but informative
-  * the website to be simple to navigate.
+  * the quiz to be easy and informative;
+  * the questions to be short and entertaining;
+  * the website to be simple to navigate;
   * the user to get a feedback on their total score.
 
 ### Strategy
 Project Purpose is 
-* to provide user with informative and fun quiz questions.
+* to provide user with informative and fun quiz questions;
 * to make users learn something new in entertaining and easy way.
 
 ### Scope 
-* a simple, straightforward UX experience.
-* a bright and fun color scheme.
-* clear content for all users.
-* a site that is visually appealing on most devices.
+* a simple, straightforward UX experience;
+* a bright and fun color scheme;
+* clear content for all users;
+* a site that is visually appealing on most devices;
 * easy rules for the quiz.
 
 ### Structure
@@ -64,8 +62,8 @@ The website is simple without any distractive images, which gives user the abili
 
 ### Future features
 
-  * Quiz section will have more available questions and a timer set for 60 seconds
-  * score section will provide feedback for particular username
+  * Quiz section will have more available questions and a timer set for 60 seconds;
+  * score section will provide feedback for particular username;
   * emojis will be animated 
   
 ---
@@ -145,6 +143,7 @@ The Live link can be found here - [BRAINY-QUIZ](https://annatolchynska.github.io
 * ### Content
   * The questions for the game were taken from [COSMOPOLITAN random facts](https://www.cosmopolitan.com/uk/worklife/a33367076/fun-facts-random/), [101 Fun Facts](https://parade.com/966564/parade/fun-facts/
 )
-  * The code for picking questions, answers and score was taken from Youtube tutorial of Brian Design [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=3469s), some ideas for functions in js file were taken from [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1200s) by Web Dev Simplified, 
+  * The code for picking questions, answers and score was taken from Youtube tutorial of Brian Design [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=3469s), some ideas for functions in js file were taken from [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1200s) by Web Dev Simplified, animation for emojis was taken from [How to Animate a Spinning Emoji with HTML & CSS | Basic Web Development Animation Tutorial](https://www.youtube.com/watch?v=tjGrSrCn_1U&t=513s) by Juni Learning.
   * Inspiration for some code ideas were taken from [W3schools](https://www.w3schools.com/default.asp), [stackoverflow](https://stackoverflow.com/), [developer.mozilla](https://developer.mozilla.org/en-US/), Slack community.
-  * The background image was taken from [Pexels](https://www.pexels.com/)
+  * Emojis were copied from [Emoji terra](https://emojiterra.com/).
+  * The background image was taken from [Pexels](https://www.pexels.com/).

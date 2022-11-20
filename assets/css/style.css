@@ -50,7 +50,36 @@ h4 {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 15px;
+}
 
+/*emoji animation*/
+#brain {
+    font-size: 70px;
+    animation-name: side-to-side-rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: none;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes side-to-side-rotate {
+    0% {
+        transform: translateX(-150px);
+    }
+
+    50% {
+        transform: translateX(150px) rotate(-360deg);
+    }
+
+    100% {
+        transform: translateX(-150px) rotate(360deg);
+    }
 }
 
 #rules {
