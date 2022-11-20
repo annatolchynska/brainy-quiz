@@ -229,7 +229,7 @@ let startGame = () => {
     availableQuestions = [...questions];
     getNewQuestion();
 };
-//function to get questions
+//function to get random questions from available questions
 /**
  * The code is taken from YouTube tutorial 
  * How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial 
@@ -243,11 +243,9 @@ let getNewQuestion = () => {
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
     question.innerText = currentQuestion.question;
-
     choices.forEach(choice => {
         const number = choice.dataset.number;
         choice.innerText = currentQuestion['choice' + number];
@@ -259,13 +257,11 @@ let getNewQuestion = () => {
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return;
-
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset.number;
-
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-        const correctAnswer = choices[currentQuestion.answer - 1];
+               const correctAnswer = choices[currentQuestion.answer - 1];
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
         } else if (classToApply === 'incorrect') {

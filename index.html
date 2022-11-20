@@ -13,26 +13,24 @@
 </head>
 
 <body>
-    <!--first displaying div-->
+    <!--div welcome-section-->
     <div id="welcome" class=display>
         <h1> WELCOME TO QUIZ GAME </h1>
         <h2><span>🤓</span> BRAINY <span>🤓</span></h2>
         <h3>RULES:</h3>
         <p id="rules">In this quiz you have to answer 10 random questions. Choose one answer for each question and see
             if
-            your IQ is equal to Einstein's :-) </p>
+            you're as brainy as Einstein :-) </p>
         <h4 id="user-name"> create your username below to start the game </h4>
         <form class="user-name">
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="Username">
         </form>
-
         <h4> READY..STEADY..</h4>
         <button type="button" id="go"> GO! </button>
-
     </div>
 
-    <!--second displaying div-->
+    <!--div quiz game-->
     <div class="display" id="quiz">
         <div class="score-item">
             <h2><span>🤓</span> BRAINY <span>🤓</span></h2>
@@ -47,7 +45,6 @@
             <p id="current-score"> SCORE <span> 🖌️</span>
             </p>
             <div class="main-text" id="score-number">0</div>
-
         </div>
         <div id="questions">
             <h1 id="question"> Insert your question here</h1>
@@ -64,11 +61,9 @@
         <div class="answer">
             <p class="choice-text" data-number="4">4</p>
         </div>
-        <div>
-            <p id="timer"> </p>
-        </div>
     </div>
-    <!--third displaying div-->
+
+    <!--div scores section-->
     <div class="display" id="score">
         <h1 id="einstein">Let's see how BRAINY you are!</h1>
         <div id="nerd"> 🤓</div>
@@ -78,8 +73,7 @@
             <li>5-7: Your random neighbor level</li>
             <li>1-5: Homer Simpson level</li>
         </ul>
-
-        <button id="start_btn">START NEW GAME</button>
+        <button type="button" id="start_btn">START NEW GAME</button>
     </div>
     <script src="assets/js/game.js"></script>
 </body>

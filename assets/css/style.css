@@ -2,7 +2,6 @@
 
 /* welcome div */
 * {
-
     margin: 0;
     padding: 0;
     font-family: Mali;
@@ -43,7 +42,6 @@ h3 {
 }
 
 h4 {
-
     font-size: 40px;
     color: #bb44f4;
     text-shadow: 2px 2px #f4447d;
@@ -75,7 +73,6 @@ h4 {
     border-radius: 60px;
     box-shadow: 0 0 15px 10px #bb44f4;
     padding-left: 15px;
-
 }
 
 #go {
@@ -92,7 +89,6 @@ h4 {
     border-style: none;
     box-shadow: none;
 }
-
 /* quiz-game div*/
 #quiz {
     display: none;
@@ -123,7 +119,6 @@ h4 {
     color: #44f4bb;
     font-size: 30px;
     text-align: center;
-
 }
 
 /* question section */
@@ -150,7 +145,6 @@ h4 {
     box-shadow: 0 0 10px 10px gray;
     color: #f4447d;
     text-shadow: 1px 1px white;
-
 }
 
 .choice-text:active {
@@ -179,7 +173,6 @@ h4 {
     text-align: center;
     color: #bb44f4;
     text-shadow: 1px 1px white;
-
 }
 
 #number {
@@ -227,13 +220,11 @@ h4 {
     padding-left: 20px;
     padding-right: 20px;
     border: 2px solid #f4447d;
-
 }
 
 #start_btn:active {
     box-shadow: none;
     border-style: none;
-
 }
 
 /* media queries */
@@ -305,7 +296,6 @@ h4 {
         font-size: 25px;
         margin-left: 15px;
         margin-right: 15px;
-
     }
 
     h4 {
@@ -315,12 +305,10 @@ h4 {
     }
 
     #score-number {
-
         font-size: 30px;
     }
 
     #current-score {
-
         margin-top: 20px;
     }
 
