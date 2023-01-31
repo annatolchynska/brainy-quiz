@@ -151,6 +151,22 @@ h4 {
     box-shadow: none;
 }
 
+#timer {
+    font-size: 20px;
+    margin-left: 45%;
+    margin-top: 5px;
+    color:#bb44f4;
+
+}
+
+.correct {
+    background-color:#44f4bb;
+}
+
+.incorrect {
+    background-color:#f4447d;
+}
+
 /* score div */
 #score {
     display: none;

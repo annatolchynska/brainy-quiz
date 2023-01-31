@@ -226,6 +226,7 @@ document.getElementById('start_btn').addEventListener('click', function goHome()
 let startGame = () => {
     questionCounter = 0;
     score = 0;
+    scoreText.innerText = score;
     availableQuestions = [...questions];
     getNewQuestion();
 };
@@ -272,7 +273,7 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply);
             correctAnswer.parentElement.classList.remove('correct');
             getNewQuestion();
-        }, 10);
+        }, 1000);
     });
 });
 //function to count scores
@@ -281,4 +282,23 @@ let incrementScore = num => {
     scoreText.innerText = score;
     totalText.innerText = username.value + '= ' + score;
 };
+
+const timeH = document.querySelector('#timer');
+let timeSecond = 30;
+
+displayTime(timeSecond)
+
+const countDown = setInterval(()=>{
+    timeSecond--;
+    displayTime(timeSecond);
+    if(timeSecond <= 0 || timeSecond < 1){
+        clearInterval(countDown);
+    }
+},1000)
+
+function displayTime(second) {
+    const sec = Math.floor(second % 60);
+    timeH.innerHTML = '${sec}';
+}
+
 startGame();
