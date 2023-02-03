@@ -198,12 +198,12 @@ const username = document.getElementById('username');
 //functions 
 //functions to show/hide divs
 document.getElementById('go').addEventListener('click', function showQuiz() {
-    if (welcome.style.display === "block") {
-        welcome.style.display = "none";
+    if (welcome.style.display === "block"){
+       welcome.style.display = "none";
     } else {
         welcome.style.display = "block";
     }
-    if (welcome.style.display === "none") {
+    if (welcome.style.display === "none"){
         quiz.style.display = "block";
         startGame();
     } else {
@@ -266,14 +266,11 @@ choices.forEach(choice => {
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
         } else if (classToApply === 'incorrect') {
-            correctAnswer.parentElement.classList.add('correct');
+            correctAnswer.classList.add('correct');
         }
-        selectedChoice.parentElement.classList.add(classToApply);
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            correctAnswer.parentElement.classList.remove('correct');
-            getNewQuestion();
-        }, 1000);
+        selectedChoice.classList.add(classToApply);
+        getNewQuestion();
+        
     });
 });
 //function to count scores
@@ -282,23 +279,5 @@ let incrementScore = num => {
     scoreText.innerText = score;
     totalText.innerText = username.value + '= ' + score;
 };
-
-const timeH = document.querySelector('#timer');
-let timeSecond = 30;
-
-displayTime(timeSecond)
-
-const countDown = setInterval(()=>{
-    timeSecond--;
-    displayTime(timeSecond);
-    if(timeSecond <= 0 || timeSecond < 1){
-        clearInterval(countDown);
-    }
-},1000)
-
-function displayTime(second) {
-    const sec = Math.floor(second % 60);
-    timeH.innerHTML = '${sec}';
-}
 
 startGame();
