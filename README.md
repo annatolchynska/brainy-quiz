@@ -113,6 +113,7 @@ The website is simple without any distractive images, which gives user the abili
    <img src ="./assets/images/error.png" alt="screenshot of error">.
 
    it was fixed by entering the following code in the head section of the html file: `<link rel="shortcut icon" href="#">`.
+   * The score wasn't resetting properly, so I added this line of code to `startGame()` function `scoreText.innerText = score;` and it fixed the problem.
    * No other bugs were found.
 
    ### Deployment

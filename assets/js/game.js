@@ -180,12 +180,14 @@ const questions = [{
 const welcome = document.getElementById("welcome");
 const quiz = document.getElementById('quiz');
 const scoreDiv = document.getElementById('score');
+const welcomeback = document.getElementById("welcomeback");
 const question = document.getElementById('question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score-number');
 const totalText = document.getElementById('number');
 const progressBarFull = document.getElementById('progressBarFull');
+const backText = document.getElementById('back');
 let currentQuestion = {};
 let acceptingAnswers = true;
 let questionCounter = 0;
@@ -196,31 +198,28 @@ let score;
 const username = document.getElementById('username');
 
 //functions 
-//functions to show/hide divs
-document.getElementById('go').addEventListener('click', function showQuiz() {
-    if (welcome.style.display === "block"){
-       welcome.style.display = "none";
-    } else {
-        welcome.style.display = "block";
-    }
-    if (welcome.style.display === "none"){
-        quiz.style.display = "block";
-        startGame();
-    } else {
-        quiz.style.display = "none";
+// validate the username
+document.getElementById('go').addEventListener('click', function usernameValidate() {
+    if (username.value==="") {
+       alert("Please Enter the Username!");
+       return false;
     }
 });
-document.getElementById('start_btn').addEventListener('click', function goHome() {
-    if (scoreDiv.style.display === "block") {
-        scoreDiv.style.display = "none";
-    } else {
-        scoreDiv.style.display = "block";
-    }
-    if (scoreDiv.style.display === "none") {
-        welcome.style.display = "block";
-    } else {
-        welcome.style.display = "none;";
-    }
+//functions to show/hide divs
+document.getElementById('go').addEventListener('click', () => {
+    welcome.style.display = 'none';
+    quiz.style.display = 'block';
+    startGame()
+  });
+document.getElementById('goagain').addEventListener('click', () => {
+    welcomeback.style.display = 'none';
+    quiz.style.display = 'block';
+    startGame()
+});
+document.getElementById('start_btn').addEventListener('click', () => {
+    scoreDiv.style.display = 'none';
+    welcomeback.style.display = 'block';
+    playAgain()
 });
 //function to run the game
 let startGame = () => {
@@ -230,16 +229,20 @@ let startGame = () => {
     availableQuestions = [...questions];
     getNewQuestion();
 };
+
+//function that asking the user to play again
+let playAgain = () => {
+    backText.innerText = username.value + " ,are you ready to play again?";
+};
 //function to get random questions from available questions
 /**
  * The code is taken from YouTube tutorial 
  * How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial 
- * by Brian Design
+ * by Brian Design url'(https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=3469s)'
  */
 let getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
-
         return scoreDiv.style.display = "block", quiz.style.display = 'none';
     }
     questionCounter++;
@@ -262,15 +265,16 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset.number;
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-               const correctAnswer = choices[currentQuestion.answer - 1];
+            const correctAnswer = choices[currentQuestion.answer - 1];
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
         } else if (classToApply === 'incorrect') {
             correctAnswer.classList.add('correct');
         }
         selectedChoice.classList.add(classToApply);
-        getNewQuestion();
-        
+//the next question button
+        document.getElementById('next').addEventListener('click', function getNewQuestion() {
+        });     
     });
 });
 //function to count scores

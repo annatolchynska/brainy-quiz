@@ -89,6 +89,38 @@ h4 {
     border-style: none;
     box-shadow: none;
 }
+/* welcomeback div */
+#welcomeback {
+    display: none;
+}
+
+#back {
+    color: #f4447d;
+    text-shadow: 1px 1px white;
+    font-size: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#goagain {
+    color: #f4447d;
+    box-shadow: 0 0 10px 10px #44f4bb;
+    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+    border: 2px solid #44f4bb;
+    margin-left: 45%;
+}
+
+#goagain:active {
+    border-style: none;
+    box-shadow: none;
+}
+
 /* quiz-game div*/
 #quiz {
     display: none;
@@ -157,6 +189,22 @@ h4 {
 
 .incorrect {
     background-color:#f4447d;
+}
+#next {
+    color: #f4447d;
+    box-shadow: 0 0 10px 10px #44f4bb;
+    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 45%;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    border: 2px solid #44f4bb;
+}
+
+#next:active {
+    color: #44f4bb;
+    box-shadow: 0 0 10px 10px #f4447d;
 }
 
 /* score div */
@@ -250,10 +298,6 @@ h4 {
         font-size: 30px;
     }
 
-    #next {
-        margin-left: 20px;
-    }
-
     .choice-text {
         font-size: 25px;
         margin-left: 20px;
@@ -333,5 +377,9 @@ h4 {
         margin-left: 15px;
         margin-right: 15px;
         text-shadow: none;
+    }
+
+    #next {
+        font-size: 20px;
     }
 }

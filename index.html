@@ -22,14 +22,22 @@
             if
             you're as brainy as Einstein :-) </p>
         <h4 id="user-name"> create your username below to start the game </h4>
-        <form class="user-name">
+        <form class="form-field">
             <label for="username"></label>
-            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="text" name="username" id="username" placeholder="Username" value="">
         </form>
         <h4> READY..STEADY..</h4>
-        <button type="button" id="go"> GO! </button>
+        <button type="button" id="go" onclick="return usernameValidate()">GO!</button>
     </div>
-
+    <!--div welcome-section (for users who already played)-->
+    <div id="welcomeback" class=display>
+        <h1> WELCOME BACK TO QUIZ GAME </h1>
+        <h2><span>🤓</span> BRAINY <span>🤓</span></h2>
+        <h3 id="again">You know the rules</h3>
+        <p id="back">Are you ready to play again? </p>
+        <h4> READY..STEADY..</h4>
+        <button type="button" id="goagain">GO!</button>
+    </div>
     <!--div quiz game-->
     <div class="display" id="quiz">
         <div class="score-item">
@@ -61,6 +69,7 @@
         <div class="answer">
             <p class="choice-text" data-number="4">4</p>
         </div>
+        <button type="button" id="next" onclick="getNewQuestion()"> NEXT </button>
     </div>
 
     <!--div scores section-->
