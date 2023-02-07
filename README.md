@@ -65,11 +65,11 @@ The website is simple without any distractive images, which gives user the abili
     
 ---
 ### Features
- * The welcome section explains the rules of the quiz to the user and provides the ability to create a username and a button to start the quiz.
+ * The welcome section explains the rules of the quiz to the user and asks for a username in order to start the game.
 
 <img src ="./assets/images/welcome-section.png" alt ="the screenshot of the landing page">
 
-* The quiz-section contains the info of the current number of question out of 10, the scoreboard, which shows how many right answers were given, question and 4 options of answers.
+* The quiz-section contains the info of the current number of question out of 10, the scoreboard, which shows how many right answers were given, question and 4 options of answers. Users are able to see if their answer was correct and if not the section shows which answer was correct.
 
 <img src ="./assets/images/quiz-section.png" alt ="the screenshot of the quiz-section">
 
@@ -118,6 +118,37 @@ The website is simple without any distractive images, which gives user the abili
 
    it was fixed by entering the following code in the head section of the html file: `<link rel="shortcut icon" href="#">`.
    * The score wasn't resetting properly, so I added this line of code to `startGame()` function `scoreText.innerText = score;` and it fixed the problem.
+   * The start button was working from the second click. To fix this I rewrote the code from this: 
+
+```js 
+
+   document.getElementById('go').addEventListener('click', () => { 
+ if (welcome.style.display === "block") {
+        welcome.style.display = "none";
+   } else {
+       welcome.style.display = "block";
+    }
+    if (welcome.style.display === "none") {
+       quiz.style.display = "block";
+        startGame();`
+    } else {
+      quiz.style.display = "none";
+   }
+});
+
+```
+   to this: 
+
+```js
+
+   button.addEventListener('click', () => {
+    welcome.style.display = 'none';
+    quiz.style.display = 'block';
+    startGame();
+});
+
+```
+
    * No other bugs were found.
 
    ### Deployment

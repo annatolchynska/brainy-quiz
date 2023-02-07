@@ -199,13 +199,19 @@ const username = document.getElementById('username');
 
 //functions 
 //validate the username
+let button = document.getElementById('go');
+button.disabled = true;
+username.addEventListener('input', validateUsername);
+
 function validateUsername() {
-    if (username.value === "") {
-        alert("Please Enter the Username!");
+    if (username.value === '') {
+        button.disabled = true;
+    } else {
+        button.disabled = false;
     }
-}
+};
 //functions to show/hide divs
-document.getElementById('go').addEventListener('click', () => {
+button.addEventListener('click', () => {
     welcome.style.display = 'none';
     quiz.style.display = 'block';
     startGame();
@@ -220,6 +226,7 @@ document.getElementById('go_again').addEventListener('click', () => {
     quiz.style.display = 'block';
     playAgain();
 });
+
 //function to run the game
 let startGame = () => {
     questionCounter = 0;
@@ -242,7 +249,7 @@ let playAgain = () => {
 let getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
-        return scoreDiv.style.display = "block", quiz.style.display = 'none';
+        return scoreDiv.style.display = 'block', quiz.style.display = 'none';
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
@@ -274,6 +281,7 @@ choices.forEach(choice => {
         //the next question button
         document.getElementById('next').addEventListener('click', () => {
             selectedChoice.classList.remove(classToApply);
+            correctAnswer.classList.remove('correct');
             getNewQuestion();
         });
     });
@@ -285,4 +293,5 @@ let incrementScore = num => {
     totalText.innerText = username.value + '= ' + score;
 };
 
+playAgain();
 startGame();

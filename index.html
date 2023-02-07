@@ -9,6 +9,7 @@
     <meta name="keywords" content="quiz game, trivia game, brainy">
     <link rel="shortcut icon" href="#">
     <title>Brainy quiz game</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -21,13 +22,13 @@
         <p id="rules">In this quiz you have to answer 10 random questions. Choose one answer for each question and see
             if
             you're as brainy as Einstein :-) </p>
-        <h4 id="user-name"> create your username below to start the game </h4>
+        <h4 id="user-name"> Enter the username below to start the game </h4>
         <form class="form-field">
             <label for="username"></label>
-            <input type="text" name="username" id="username" placeholder="Username" value="">
+            <input type="text" name="username" id="username" placeholder="Username">
         </form>
         <h4> READY..STEADY..</h4>
-        <button type="button" id="go" onclick="return validateUsername()">GO!</button>
+        <button type="button" id="go">GO!</button>
     </div>
     <!--div welcome-section (for users who already played)-->
     <div id="welcomeback" class=display>
