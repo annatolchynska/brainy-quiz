@@ -105,7 +105,7 @@ h4 {
     text-align: center;
 }
 
-#goagain {
+#go_again {
     color: #f4447d;
     box-shadow: 0 0 10px 10px #44f4bb;
     font-size: 40px;
@@ -116,7 +116,7 @@ h4 {
     margin-left: 45%;
 }
 
-#goagain:active {
+#go_again:active {
     border-style: none;
     box-shadow: none;
 }
@@ -184,12 +184,13 @@ h4 {
 }
 
 .correct {
-    background-color:#44f4bb;
+    background:#44f4bb;
 }
 
 .incorrect {
-    background-color:#f4447d;
+    background:#e985a4;
 }
+
 #next {
     color: #f4447d;
     box-shadow: 0 0 10px 10px #44f4bb;
@@ -294,7 +295,6 @@ h4 {
 /* for sreens size from 700px and down */
 @media screen and (max-width: 700px) {
     #question {
-
         font-size: 30px;
     }
 
@@ -330,6 +330,10 @@ h4 {
     }
 
     #go {
+        font-size: 30px;
+    }
+
+    #go_again {
         font-size: 30px;
     }
 

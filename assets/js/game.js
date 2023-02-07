@@ -198,28 +198,27 @@ let score;
 const username = document.getElementById('username');
 
 //functions 
-// validate the username
-document.getElementById('go').addEventListener('click', function usernameValidate() {
-    if (username.value==="") {
-       alert("Please Enter the Username!");
-       return false;
+//validate the username
+function validateUsername() {
+    if (username.value === "") {
+        alert("Please Enter the Username!");
     }
-});
+}
 //functions to show/hide divs
 document.getElementById('go').addEventListener('click', () => {
     welcome.style.display = 'none';
     quiz.style.display = 'block';
-    startGame()
-  });
-document.getElementById('goagain').addEventListener('click', () => {
-    welcomeback.style.display = 'none';
-    quiz.style.display = 'block';
-    startGame()
+    startGame();
 });
 document.getElementById('start_btn').addEventListener('click', () => {
     scoreDiv.style.display = 'none';
     welcomeback.style.display = 'block';
-    playAgain()
+    startGame();
+});
+document.getElementById('go_again').addEventListener('click', () => {
+    welcomeback.style.display = 'none';
+    quiz.style.display = 'block';
+    playAgain();
 });
 //function to run the game
 let startGame = () => {
@@ -229,10 +228,10 @@ let startGame = () => {
     availableQuestions = [...questions];
     getNewQuestion();
 };
-
 //function that asking the user to play again
 let playAgain = () => {
     backText.innerText = username.value + " ,are you ready to play again?";
+    startGame();
 };
 //function to get random questions from available questions
 /**
@@ -265,16 +264,18 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset.number;
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-            const correctAnswer = choices[currentQuestion.answer - 1];
+        const correctAnswer = choices[currentQuestion.answer - 1];
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
         } else if (classToApply === 'incorrect') {
             correctAnswer.classList.add('correct');
         }
         selectedChoice.classList.add(classToApply);
-//the next question button
-        document.getElementById('next').addEventListener('click', function getNewQuestion() {
-        });     
+        //the next question button
+        document.getElementById('next').addEventListener('click', () => {
+            selectedChoice.classList.remove(classToApply);
+            getNewQuestion();
+        });
     });
 });
 //function to count scores

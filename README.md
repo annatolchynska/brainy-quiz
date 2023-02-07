@@ -76,6 +76,10 @@ The website is simple without any distractive images, which gives user the abili
 * The score-section shows how many right answers were given out of ten and provides feedback of knowledge level of the user in funny way.
 <img src ="./assets/images/score-section.png" alt = "the screenshot of score-section">
 
+* The welcome back section contains invitation for the user who has alredy played to play again.
+
+<img src ="./assets/images/welcomeback.png" alt = "the screenshot of welcomeback section">
+
 ### Testing
    * This website works in different browsers: Chrome, Safari, Opera.
    * I made sure that the game is responsive and functions properly on all standart screen sizes by using devtools device toolbar.

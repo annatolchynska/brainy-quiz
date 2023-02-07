@@ -27,16 +27,16 @@
             <input type="text" name="username" id="username" placeholder="Username" value="">
         </form>
         <h4> READY..STEADY..</h4>
-        <button type="button" id="go" onclick="return usernameValidate()">GO!</button>
+        <button type="button" id="go" onclick="return validateUsername()">GO!</button>
     </div>
     <!--div welcome-section (for users who already played)-->
     <div id="welcomeback" class=display>
         <h1> WELCOME BACK TO QUIZ GAME </h1>
         <h2><span>🤓</span> BRAINY <span>🤓</span></h2>
         <h3 id="again">You know the rules</h3>
-        <p id="back">Are you ready to play again? </p>
+        <p id="back"> </p>
         <h4> READY..STEADY..</h4>
-        <button type="button" id="goagain">GO!</button>
+        <button type="button" id="go_again">GO!</button>
     </div>
     <!--div quiz game-->
     <div class="display" id="quiz">
@@ -69,14 +69,14 @@
         <div class="answer">
             <p class="choice-text" data-number="4">4</p>
         </div>
-        <button type="button" id="next" onclick="getNewQuestion()"> NEXT </button>
+        <button type="button" id="next"> NEXT </button>
     </div>
 
     <!--div scores section-->
     <div class="display" id="score">
         <h1 id="einstein">Let's see how BRAINY you are!</h1>
         <div id="nerd"> 🤓</div>
-        <p id="number">total</p>
+        <p id="number">0</p>
         <ul id="IQ">
             <li>7-10: Einstein level</li>
             <li>5-7: Your random neighbor level</li>
