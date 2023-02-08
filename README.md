@@ -65,6 +65,11 @@ The website is simple without any distractive images, which gives user the abili
     
 ---
 ### Features
+
+ * The website has its own logo and favicon
+
+ <img src ="./favicon.ico">
+ 
  * The welcome section explains the rules of the quiz to the user and asks for a username in order to start the game.
 
 <img src ="./assets/images/welcome-section.png" alt ="the screenshot of the landing page">

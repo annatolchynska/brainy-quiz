@@ -209,24 +209,17 @@ function validateUsername() {
     } else {
         button.disabled = false;
     }
-};
+}
 //functions to show/hide divs
-button.addEventListener('click', () => {
-    welcome.style.display = 'none';
-    quiz.style.display = 'block';
+button.addEventListener("click", () => {
+    welcome.style.display = "none";
+    quiz.style.display = "block";
     startGame();
 });
-document.getElementById('start_btn').addEventListener('click', () => {
-    scoreDiv.style.display = 'none';
-    welcomeback.style.display = 'block';
-    startGame();
+document.getElementById("start_btn").addEventListener("click", () => {
+    scoreDiv.style.display = "none";
+    welcomeback.style.display = "block";
 });
-document.getElementById('go_again').addEventListener('click', () => {
-    welcomeback.style.display = 'none';
-    quiz.style.display = 'block';
-    playAgain();
-});
-
 //function to run the game
 let startGame = () => {
     questionCounter = 0;
@@ -235,11 +228,7 @@ let startGame = () => {
     availableQuestions = [...questions];
     getNewQuestion();
 };
-//function that asking the user to play again
-let playAgain = () => {
-    backText.innerText = username.value + " ,are you ready to play again?";
-    startGame();
-};
+
 //function to get random questions from available questions
 /**
  * The code is taken from YouTube tutorial 
@@ -278,13 +267,15 @@ choices.forEach(choice => {
             correctAnswer.classList.add('correct');
         }
         selectedChoice.classList.add(classToApply);
-        //the next question button
-        document.getElementById('next').addEventListener('click', () => {
-            selectedChoice.classList.remove(classToApply);
-            correctAnswer.classList.remove('correct');
-            getNewQuestion();
-        });
     });
+});
+//the next question button
+document.getElementById("next").addEventListener("click", () => {
+    choices.forEach(choice => {
+        choice.classList.remove('incorrect');
+        choice.classList.remove('correct');
+    });
+    getNewQuestion();
 });
 //function to count scores
 let incrementScore = num => {
@@ -292,6 +283,13 @@ let incrementScore = num => {
     scoreText.innerText = score;
     totalText.innerText = username.value + '= ' + score;
 };
-
-playAgain();
-startGame();
+document.getElementById("go_again").addEventListener("click", () => {
+    welcomeback.style.display = "none";
+    quiz.style.display = "block";
+    playAgain();
+});
+//function that asking the user to play again
+let playAgain = () => {
+    backText.innerText = username.value + " ,are you ready to play again?";
+    startGame();
+};
